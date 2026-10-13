@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="js/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/ds-bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#242423;color:#E8EDDF;font-family:var(--cc-font-body);-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#F5CB5C;text-decoration:none}
+a:hover{color:#E8EDDF}
+@keyframes ccBadgeBounce{0%,55%,100%{transform:translateY(0) scale(1,1)}62%{transform:translateY(0) scale(1.08,.9)}70%{transform:translateY(-10px) scale(.96,1.06)}78%{transform:translateY(0) scale(1.05,.94)}85%{transform:translateY(-4px) scale(1,1)}92%{transform:translateY(0) scale(1,1)}}
+.cc-badge-bounce{animation:ccBadgeBounce 2.4s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.cc-badge-bounce{animation:none !important}}
+</style>
+</helmet>
+<section id="pricing" data-screen-label="Discovery Offer" style="background:#242423;padding:96px 24px;font-family:var(--cc-font-body)">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">Start this week</span>
+      <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#E8EDDF;text-transform:uppercase;text-wrap:balance">It's time to tackle teething issues</h2>
+    </div>
+
+    <div style="background:#F5CB5C;border-radius:24px;overflow:hidden;display:flex;flex-wrap:wrap">
+      <div role="region" aria-roledescription="carousel" aria-label="Discovery offer" tabIndex="0" onKeyDown="{{ onKey }}" onTouchStart="{{ onTouchStart }}" onTouchEnd="{{ onTouchEnd }}" style="flex:1 1 340px;min-width:0;padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;justify-content:space-between;gap:32px;outline:none;border-radius:24px" style-focus="box-shadow:inset 0 0 0 2px #242423">
+        <div style="display:grid">
+          <sc-for list="{{ slides }}" as="s" hint-placeholder-count="1">
+            <div role="group" aria-roledescription="slide" aria-label="{{ s.ariaLabel }}" aria-hidden="{{ s.hidden }}" style="grid-area:1 / 1;display:flex;flex-direction:column;gap:16px;opacity:{{ s.opacity }};transform:{{ s.transform }};visibility:{{ s.visibility }};transition:{{ s.transition }}">
+              <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#242423">{{ s.label }}</span>
+              <h3 style="margin:0;font-family:'Figtree',var(--cc-font-body),sans-serif;font-weight:700;font-size:clamp(28px,3.4vw,40px);line-height:1.15;color:#242423;text-wrap:balance">
+                <sc-if value="{{ s.isScarcity }}" hint-placeholder-val="{{ false }}">
+                  <span>{{ spots }}</span> discovery spots open this quarter.
+                </sc-if>
+                <sc-if value="{{ s.isPlain }}" hint-placeholder-val="{{ true }}">{{ s.headline }}</sc-if>
+              </h3>
+              <p style="margin:0;font-size:17px;line-height:1.65;color:#333533;text-wrap:pretty;max-width:52ch">
+                <sc-if value="{{ s.isScarcity }}" hint-placeholder-val="{{ false }}">
+                  We work with only a few clients at a time so we can go deep. Launch rate ends <span style="color:#242423;font-weight:700">{{ endDate }}</span>.
+                </sc-if>
+                <sc-if value="{{ s.isPlain }}" hint-placeholder-val="{{ true }}">{{ s.body }}</sc-if>
+              </p>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+          <div style="display:flex;align-items:center">
+            <sc-for list="{{ dots }}" as="d" hint-placeholder-count="3">
+              <button type="button" aria-label="{{ d.label }}" aria-current="{{ d.current }}" onClick="{{ d.go }}" style="all:unset;cursor:pointer;width:32px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:8px" style-focus="outline:2px solid #242423;outline-offset:-2px">
+                <span style="display:block;height:8px;border-radius:4px;width:{{ d.w }};background:{{ d.bg }};transition:{{ d.transition }}"></span>
+              </button>
+            </sc-for>
+          </div>
+          <div style="display:flex;gap:8px">
+            <button type="button" aria-label="Previous slide" onClick="{{ prev }}" style="all:unset;cursor:pointer;width:44px;height:44px;border-radius:22px;border:1.5px solid #242423;display:flex;align-items:center;justify-content:center;color:#242423;font-size:18px" style-hover="background:#242423;color:#F5CB5C" style-focus="outline:2px solid #242423;outline-offset:2px">←</button>
+            <button type="button" aria-label="Next slide" onClick="{{ next }}" style="all:unset;cursor:pointer;width:44px;height:44px;border-radius:22px;border:1.5px solid #242423;display:flex;align-items:center;justify-content:center;color:#242423;font-size:18px" style-hover="background:#242423;color:#F5CB5C" style-focus="outline:2px solid #242423;outline-offset:2px">→</button>
+          </div>
+        </div>
+        <span aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">{{ liveText }}</span>
+      </div>
+
+      <div style="flex:1 1 340px;min-width:0;padding:clamp(12px,1.5vw,16px)">
+        <div style="height:100%;background:#242423;border:1px solid #5b6b5f;border-radius:18px;padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:22px">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <span style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#CFDBD5">2-week discovery · Launch rate</span>
+            <span style="font-size:22px;font-weight:700;color:#E8EDDF">Embedded Fact Finding</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px">
+            <span style="font-size:20px;color:#A8A8A2;text-decoration:line-through;text-decoration-thickness:2px"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Was </span>US$2,000</span>
+            <span style="font-family:var(--cc-font-display);font-size:clamp(48px,6vw,64px);line-height:1;color:#F5CB5C"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Now </span>US$1,000</span>
+            <span class="cc-badge-bounce" style="background:#F5CB5C;color:#242423;font-size:13px;font-weight:700;letter-spacing:0.08em;padding:6px 10px;border-radius:999px;display:inline-block;transform-origin:center bottom">50% OFF</span>
+          </div>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:#CFDBD5;text-wrap:pretty">Written diagnostic report and recommendations. You keep the report.</p>
+          <ol aria-label="How it works" style="list-style:none;margin:0;padding:16px 0 0;border-top:1px solid #5b6b5f;display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;font-size:14px;color:#CFDBD5">
+            <li>Message us</li><li aria-hidden="true" style="color:#5b6b5f">→</li>
+            <li>Fit check</li><li aria-hidden="true" style="color:#5b6b5f">→</li>
+            <li>2-week discovery</li><li aria-hidden="true" style="color:#5b6b5f">→</li>
+            <li>Written report</li>
+          </ol>
+          <div style="margin-top:auto;display:flex;flex-direction:column;gap:10px">
+            <a href="{{ waUrl }}" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:52px;padding:14px 24px;background:#25D366;color:#242423;font-weight:700;font-size:17px;border-radius:999px;transition:background 0.2s ease" style-hover="background:#1EBE5A;color:#242423" style-focus="outline:2px solid #E8EDDF;outline-offset:3px">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 01-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1121 11.5z"></path></svg>
+              Chat on WhatsApp
+            </a>
+            <span style="font-size:14px;color:#CFDBD5;text-align:center">Replies in <span style="color:#E8EDDF">{{ replyHours }}</span> hours, usually same day.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin:0;font-size:17px;line-height:1.6;color:#CFDBD5;text-wrap:pretty;max-width:60ch">Send us one sentence about the problem. We'll reply with whether discovery is the right first step.</p>
+  </div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;whatsappNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;6580349668&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Offer&quot;},&quot;spotsLeft&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;3&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Offer&quot;},&quot;endDate&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;31st Dec 2026&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Offer&quot;},&quot;replyHours&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;3&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Offer&quot;}}">
+class Component extends DCLogic {
+  state = { i: 0 };
+  componentDidMount() {
+    this.mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    this.onMq = () => this.forceUpdate();
+    this.mq.addEventListener?.('change', this.onMq);
+    this.forceUpdate();
+  }
+  componentWillUnmount() { this.mq?.removeEventListener?.('change', this.onMq); }
+  go(i) { this.setState({ i: (i + 3) % 3 }); }
+  renderVals() {
+    const SLIDES = [
+      { label: 'The problem', headline: "Stuck on a business problem? Let's isolate it in 2 weeks.", body: 'We find the root cause and hand you a written diagnostic with a clear fix. No guesswork, no vendor pitch.', msg: "Hi Connected Commons, I have a business problem I'd like to talk through. Is the 2-week discovery (US$1,000 launch rate) the right first step?" },
+      { label: 'Limited intake', scarcity: true, msg: "Hi Connected Commons, I'd like to check availability for the 2-week discovery (US$1,000 launch rate)." },
+      { label: 'No strings', headline: "Keep the report. Decide what's next on your own terms.", body: 'No obligation to build with us. The diagnostic is yours either way.', msg: "Hi Connected Commons, I'd like to know more about the 2-week discovery and what the written report covers." }
+    ];
+    const i = this.state.i;
+    const reduce = !!this.mq?.matches;
+    const t = reduce ? 'none' : 'opacity 0.35s ease, transform 0.35s ease, visibility 0.35s';
+    const num = this.props.whatsappNumber ?? '6580349668';
+    const spots = this.props.spotsLeft ?? '3';
+    const slides = SLIDES.map((s, k) => ({
+      ...s, isScarcity: !!s.scarcity, isPlain: !s.scarcity,
+      ariaLabel: `${k + 1} of 3`, hidden: k !== i ? 'true' : 'false',
+      opacity: k === i ? 1 : 0, visibility: k === i ? 'visible' : 'hidden',
+      transform: k === i || reduce ? 'none' : (k < i ? 'translateX(-16px)' : 'translateX(16px)'), transition: t
+    }));
+    return {
+      slides,
+      spots,
+      endDate: this.props.endDate ?? '31st Dec 2026',
+      replyHours: this.props.replyHours ?? '3',
+      liveText: `Slide ${i + 1} of 3: ${SLIDES[i].label}`,
+      waUrl: `https://wa.me/${num}?text=${encodeURIComponent(SLIDES[i].msg)}`,
+      dots: SLIDES.map((s, k) => ({ label: `Go to slide ${k + 1}: ${s.label}`, current: k === i ? 'true' : 'false', w: k === i ? '24px' : '8px', bg: k === i ? '#242423' : 'rgba(36,36,35,0.35)', transition: reduce ? 'none' : 'width 0.3s ease, background 0.3s ease', go: () => this.go(k) })),
+      prev: () => this.go(i - 1),
+      next: () => this.go(i + 1),
+      onKey: e => { if (e.key === 'ArrowRight') { e.preventDefault(); this.go(i + 1); } else if (e.key === 'ArrowLeft') { e.preventDefault(); this.go(i - 1); } },
+      onTouchStart: e => { this.tx = e.touches[0].clientX; this.ty = e.touches[0].clientY; },
+      onTouchEnd: e => {
+        if (this.tx == null) return;
+        const dx = e.changedTouches[0].clientX - this.tx, dy = e.changedTouches[0].clientY - this.ty;
+        this.tx = null;
+        if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) this.go(i + (dx < 0 ? 1 : -1));
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
