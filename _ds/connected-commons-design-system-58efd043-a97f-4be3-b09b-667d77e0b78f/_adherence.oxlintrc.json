@@ -1,0 +1,72 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": []
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Aqua|Figtree))/i]",
+        "message": "Font not provided by the design system. Available: Aqua, Figtree."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--cc-font-body",
+      "--cc-font-display",
+      "--cc-graphite",
+      "--cc-ink",
+      "--cc-mist",
+      "--cc-paper",
+      "--cc-sage",
+      "--cc-sage-text",
+      "--cc-yellow",
+      "--cc-yellow-deep"
+    ],
+    "tokenKinds": {
+      "--cc-ink": "color",
+      "--cc-graphite": "color",
+      "--cc-sage": "color",
+      "--cc-mist": "color",
+      "--cc-paper": "color",
+      "--cc-yellow": "color",
+      "--cc-yellow-deep": "color",
+      "--cc-sage-text": "font",
+      "--cc-font-display": "font",
+      "--cc-font-body": "font"
+    },
+    "fontFamilies": [
+      "Aqua",
+      "Figtree"
+    ]
+  }
+}

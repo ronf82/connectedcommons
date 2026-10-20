@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Connected Commons | 360° Business Operations &amp; Corporate Tooling</title>
+<meta name="description" content="We help SMEs and funded startups solve business problems, develop solutions, and manage growth in Southeast Asia at a fraction of traditional costs.">
+<meta name="keywords" content="Business Consulting Singapore, SME Solutions, SEA Market Entry, Operational Leadership, Corporate Tooling">
+<link rel="icon" type="image/png" href="assets/favicon-512.png">
+<link rel="stylesheet" href="_ds/connected-commons-design-system-58efd043-a97f-4be3-b09b-667d77e0b78f/styles.css">
+<script src="_ds/connected-commons-design-system-58efd043-a97f-4be3-b09b-667d77e0b78f/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#242423;color:#E8EDDF;font-family:var(--cc-font-body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+*{box-sizing:border-box}
+a{color:#F5CB5C;text-decoration:none}
+a:hover{color:#E8EDDF}
+@keyframes ccIntro{0%{transform:scale(1.32) rotate(-3deg);opacity:0}25%{opacity:1}100%{transform:scale(1) rotate(0deg);opacity:1}}
+@keyframes ccDrift{0%{transform:scale(1) translate(0,0) rotate(0deg)}50%{transform:scale(1.06) translate(-1.2%,0.6%) rotate(0.6deg)}100%{transform:scale(1) translate(0,0) rotate(0deg)}}
+@keyframes ccPinDrop{0%{transform:translateY(-40px);opacity:0}60%{transform:translateY(3px);opacity:1}100%{transform:translateY(0);opacity:1}}
+@keyframes ccDot{0%{opacity:0}1.5%{opacity:1}18%{opacity:0.85}42%,100%{opacity:0}}
+@keyframes ccArrive2{0%{r:1.8;opacity:0.5}3%{r:3.6;opacity:1}20%,100%{r:1.8;opacity:0.5}}
+@keyframes ccRing{0%{r:4;opacity:0.7}100%{r:26;opacity:0}}
+@media (prefers-reduced-motion: reduce){.cc-anim,.cc-anim *{animation:none !important}.cc-dot{opacity:0 !important}}
+</style>
+</helmet>
+
+<nav style="position:sticky;top:0;z-index:50;background:rgba(36,36,35,0.92);backdrop-filter:blur(10px);border-bottom:1px solid #333533">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <a href="#hero" aria-label="Connected Commons home" style="display:flex;align-items:center;gap:10px;font-family:var(--cc-font-body);font-weight:800;font-size:clamp(18px,5vw,22px);letter-spacing:-0.01em;color:#E8EDDF;min-width:0" style-hover="color:#E8EDDF"><img src="assets/logo-mark-white.png" alt="" style="width:36px;height:36px;display:block"><span style="display:flex">connected<span style="color:#F5CB5C">commons</span></span></a>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+    <div style="display:flex;gap:28px;align-items:center;flex-wrap:wrap;justify-content:flex-end">
+      <a href="#about" style="font-size:14px;font-weight:500;color:#CFDBD5" style-hover="color:#F5CB5C">About</a>
+      <a href="#services" style="font-size:14px;font-weight:500;color:#CFDBD5" style-hover="color:#F5CB5C">Services</a>
+      <a href="#compare" style="font-size:14px;font-weight:500;color:#CFDBD5" style-hover="color:#F5CB5C">Why Us</a>
+      <a href="#pricing" style="font-size:14px;font-weight:500;color:#CFDBD5" style-hover="color:#F5CB5C">Pricing</a>
+      <a href="#contact" style="font-size:14px;font-weight:600;color:#242423;background:#F5CB5C;padding:8px 16px;border-radius:999px" style-hover="background:#E8EDDF;color:#242423">Contact</a>
+    </div>
+    </sc-if>
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <button type="button" aria-label="Menu" aria-expanded="{{ menuExpanded }}" onClick="{{ toggleMenu }}" style="all:unset;cursor:pointer;width:44px;height:44px;border-radius:22px;border:1px solid #5b6b5f;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px" style-focus="outline:2px solid #F5CB5C;outline-offset:2px">
+        <span style="display:block;width:18px;height:2px;border-radius:1px;background:#E8EDDF"></span>
+        <span style="display:block;width:18px;height:2px;border-radius:1px;background:#E8EDDF"></span>
+        <span style="display:block;width:18px;height:2px;border-radius:1px;background:#E8EDDF"></span>
+      </button>
+    </sc-if>
+  </div>
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="border-top:1px solid #333533;padding:8px 24px 20px;display:flex;flex-direction:column">
+      <a href="#about" onClick="{{ closeMenu }}" style="display:flex;align-items:center;min-height:48px;font-size:17px;font-weight:500;color:#E8EDDF;border-bottom:1px solid #333533">About</a>
+      <a href="#services" onClick="{{ closeMenu }}" style="display:flex;align-items:center;min-height:48px;font-size:17px;font-weight:500;color:#E8EDDF;border-bottom:1px solid #333533">Services</a>
+      <a href="#compare" onClick="{{ closeMenu }}" style="display:flex;align-items:center;min-height:48px;font-size:17px;font-weight:500;color:#E8EDDF;border-bottom:1px solid #333533">Why Us</a>
+      <a href="#pricing" onClick="{{ closeMenu }}" style="display:flex;align-items:center;min-height:48px;font-size:17px;font-weight:500;color:#E8EDDF;border-bottom:1px solid #333533">Pricing</a>
+      <a href="#contact" onClick="{{ closeMenu }}" style="margin-top:16px;display:flex;align-items:center;justify-content:center;min-height:48px;font-size:16px;font-weight:700;color:#242423;background:#F5CB5C;border-radius:999px">Contact</a>
+    </div>
+  </sc-if>
+</nav>
+
+<section id="hero" data-screen-label="Hero" style="position:relative;overflow:hidden;min-height:calc(100vh - 64px);display:flex;align-items:center;isolation:isolate">
+  <sc-if value="{{ showAnimSlot }}" hint-placeholder-val="{{ true }}">
+    <div id="animation-container" aria-hidden="true" style="position:absolute;inset:0;z-index:-1;overflow:hidden;pointer-events:none;background:#242423;container-type:size">{{ heroMap }}</div>
+    <div aria-hidden="true" style="position:absolute;inset:0;z-index:-1;pointer-events:none;background:{{ heroOverlay }}"></div>
+  </sc-if>
+  <div style="width:100%;max-width:1200px;margin:0 auto;padding:clamp(64px,12vw,96px) 24px 112px;position:relative;z-index:1">
+    <div style="display:flex;flex-direction:column;gap:28px;max-width:720px">
+    <h1 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(38px,5.4vw,64px);line-height:1.05;color:#E8EDDF;text-wrap:balance;text-transform:uppercase">Your Connection in South East Asia.<span style="display:block;color:#F5CB5C;margin-top:12px;font-size:0.62em;line-height:1.15">360° BUSINESS OPERATIONS &amp; CORPORATE SOLUTIONS</span></h1>
+    <p style="margin:0;font-size:clamp(17px,1.6vw,20px);line-height:1.6;color:#CFDBD5;max-width:560px;text-wrap:pretty">We help SMEs and funded startups solve business problems, develop solutions, and manage growth—at a fraction of traditional subscription costs.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px">
+      <a href="{{ deckUrl }}" download="Connected Commons - Solutions & Scenarios Deck.pdf" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;background:#F5CB5C;color:#242423;font-weight:700;font-size:16px;padding:14px 28px;border-radius:999px" style-hover="background:#E8EDDF;color:#242423">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1M8 12l4 4 4-4M12 4v12"></path></svg>
+        Download Strategy Deck
+      </a>
+      <a href="{{ waUrl }}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;border:1.5px solid #CFDBD5;color:#E8EDDF;font-weight:600;font-size:16px;padding:13px 28px;border-radius:999px" style-hover="border-color:#F5CB5C;color:#F5CB5C">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 01-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1121 11.5z"></path></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section id="the-problem" data-screen-label="The Problem" style="padding:clamp(64px,12vw,96px) 24px">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">The Problem</span>
+      <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#E8EDDF;text-transform:uppercase;text-wrap:balance">Everyone knows to adopt AI. Few know what to implement.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px">
+      <sc-for list="{{ painPoints }}" as="pp" hint-placeholder-count="3">
+        <div style="border-top:1px solid #5b6b5f;padding-top:24px;display:flex;flex-direction:column;gap:12px">
+          <span style="font-family:var(--cc-font-display);font-size:32px;color:#F5CB5C">{{ pp.num }}</span>
+          <h3 style="margin:0;font-size:22px;font-weight:700;color:#E8EDDF">{{ pp.title }}</h3>
+          <p style="margin:0;font-size:16px;line-height:1.65;color:#CFDBD5;text-wrap:pretty">{{ pp.copy }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="what-we-solve" data-screen-label="What We Can Solve" style="padding:clamp(64px,12vw,96px) 24px;border-bottom:1px solid #333533">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">What We Can Solve</span>
+      <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#E8EDDF;text-transform:uppercase;text-wrap:balance">Reclaim hours of lost time and money with the right solutions</h2>
+    </div>
+    <div style="border:1px solid #F5CB5C;border-radius:16px;padding:20px 24px;display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline">
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">Root cause fact-find</span>
+      <p style="margin:0;flex:1 1 320px;font-size:16px;line-height:1.6;color:#E8EDDF;text-wrap:pretty">In depth discovery sessions with your team to isolate and fact find root causes to symptoms, and provide recommendations tailored to your staff needs.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:24px" onMouseEnter="{{ solvePause }}" onMouseLeave="{{ solveResume }}" onTouchStart="{{ solvePause }}">
+    <div ref="{{ solveTrack }}" onScroll="{{ solveOnScroll }}" style="display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-webkit-overflow-scrolling:touch">
+      <sc-for list="{{ solveAreas }}" as="a" hint-placeholder-count="6">
+        <div data-solve-card="1" style="flex:0 0 max(280px, calc((100% - 40px) / 3));max-width:100%;box-sizing:border-box;scroll-snap-align:start;background:#333533;border-radius:20px;padding:28px 28px 32px;display:flex;flex-direction:column;gap:20px">
+          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:16px">
+            <span style="width:48px;height:48px;border-radius:14px;background:#242423;display:flex;align-items:center;justify-content:center"><img src="{{ a.icon }}" alt="" width="24" height="24" style="display:block"></span>
+            <h3 style="margin:0;font-size:20px;font-weight:700;color:#E8EDDF">{{ a.fn }}</h3>
+          </div>
+          <div style="display:flex;flex-direction:column">
+            <div style="display:flex;flex-wrap:wrap;gap:4px 16px;padding:12px 0;border-top:1px solid #5b6b5f">
+              <span style="flex:0 0 88px;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#CFDBD5;padding-top:3px">Symptom</span>
+              <span style="flex:1 1 200px;min-width:0;font-size:15px;line-height:1.55;color:#CFDBD5;text-wrap:pretty">{{ a.symptom }}</span>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:4px 16px;padding:12px 0;border-top:1px solid #5b6b5f">
+              <span style="flex:0 0 88px;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C;padding-top:3px">Solution</span>
+              <span style="flex:1 1 200px;min-width:0;font-size:15px;line-height:1.55;color:#E8EDDF;text-wrap:pretty">{{ a.solution }}</span>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:4px 16px;padding:12px 0;border-top:1px solid #5b6b5f">
+              <span style="flex:0 0 88px;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#CFDBD5;padding-top:3px">Outcome</span>
+              <span style="flex:1 1 200px;min-width:0;font-size:15px;font-weight:700;line-height:1.55;color:#E8EDDF;text-wrap:pretty">{{ a.outcome }}</span>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+      <div style="display:flex;gap:8px">
+        <sc-for list="{{ solveDots }}" as="d" hint-placeholder-count="6">
+          <button aria-label="{{ d.label }}" onClick="{{ d.go }}" style="all:unset;cursor:pointer;width:{{ d.w }};height:8px;border-radius:4px;background:{{ d.bg }};transition:width 0.3s ease, background 0.3s ease"></button>
+        </sc-for>
+      </div>
+      <div style="display:flex;gap:8px">
+        <button aria-label="Previous" onClick="{{ solvePrev }}" style="all:unset;cursor:pointer;width:44px;height:44px;border-radius:22px;border:1px solid #5b6b5f;display:flex;align-items:center;justify-content:center;color:#E8EDDF;font-size:18px" style-hover="border-color:#F5CB5C;color:#F5CB5C">←</button>
+        <button aria-label="Next" onClick="{{ solveNext }}" style="all:unset;cursor:pointer;width:44px;height:44px;border-radius:22px;border:1px solid #5b6b5f;display:flex;align-items:center;justify-content:center;color:#E8EDDF;font-size:18px" style-hover="border-color:#F5CB5C;color:#F5CB5C">→</button>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" data-screen-label="About" style="background:#333533;padding:clamp(64px,12vw,96px) 24px">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:32px 48px">
+    <div style="flex:1 1 260px;display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">About</span>
+      <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#E8EDDF;text-transform:uppercase">Who We Are</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px;flex:2 1 520px;min-width:0">
+      <p style="margin:0;font-size:18px;line-height:1.7;color:#E8EDDF;text-wrap:pretty"><b>Connected Commons</b> is a Singapore-based business solutions consultancy. We work with foreign SMEs and funded startups to diagnose challenges, develop tailored solutions, and manage operational growth across Southeast Asia.</p>
+      <p style="margin:0;font-size:18px;line-height:1.7;color:#CFDBD5;text-wrap:pretty">Led by an experienced founder and supported by a dedicated team of specialists, we deliver integrated operations and corporate tooling—tested before implementation. Instead of adding subscription complexity, we provide what works, at a fraction of the cost.</p>
+      <div style="border-top:1px solid #5b6b5f;padding-top:20px;margin-top:8px;display:flex;flex-direction:column;gap:8px">
+        <span style="font-size:13px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#CFDBD5">Company Credibility</span>
+        <p style="margin:0;font-size:16px;line-height:1.7;color:#CFDBD5;text-wrap:pretty">Our collective expertise spans 16+ years across <b>banking, payments, real estate</b> (active CEA licence), <b>logistics, and tech/talent outsourcing</b> with a Singapore head office and SEA delivery. Bilingual in English and Chinese. Compliance-grade local AI solutions crafted and available for clients.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="root-cause" data-screen-label="Root Cause" style="background:#F8F7F3;padding:clamp(64px,12vw,96px) 24px">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#5b6b5f">How We Work</span>
+      <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#242423;text-transform:uppercase;text-wrap:balance">Root Cause Isolation. Then the Fix that Fits.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:48px;align-items:center">
+      <img src="assets/pyramid.jpg" alt="Pyramid with People at the top, Process in the middle and AI at the base, casting a shadow labelled The Problem" style="display:block;width:100%;height:auto">
+      <div style="display:flex;flex-direction:column;border-bottom:1px solid #d9d8d1">
+        <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:16px;padding:18px 0;border-top:1px solid #d9d8d1">
+          <span style="width:14px;height:14px;margin-top:2px;border-radius:3px;background:#F5CB5C;"></span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#242423">People · The Top</span>
+            <p style="margin:0;font-size:15px;line-height:1.6;color:#333533;text-wrap:pretty">Judgement: escalations, relationships and decisions, placed from our regional network.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:16px;padding:18px 0;border-top:1px solid #d9d8d1">
+          <span style="width:14px;height:14px;margin-top:2px;border-radius:3px;background:#5E7360;"></span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#242423">Process · The Middle</span>
+            <p style="margin:0;font-size:15px;line-height:1.6;color:#333533;text-wrap:pretty">SOPs, playbooks and clear ownership, mapped correctly with you, so AI and people work from the same playbook.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:16px;padding:18px 0;border-top:1px solid #d9d8d1">
+          <span style="width:14px;height:14px;margin-top:2px;border-radius:3px;background:#242423;"></span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#242423">AI · The Foundation</span>
+            <p style="margin:0;font-size:15px;line-height:1.6;color:#333533;text-wrap:pretty">Carries the repetitive volume: enquiries, documents, first drafts and routine reporting.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:16px;padding:18px 0;border-top:1px solid #d9d8d1">
+          <span style="width:14px;height:14px;margin-top:2px;border-radius:3px;background:linear-gradient(135deg,#9a9a96,#e6e5e0);"></span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#242423">The Shadow · Your Problem</span>
+            <p style="margin:0;font-size:15px;line-height:1.6;color:#333533;text-wrap:pretty">Your problems are symptoms of a root cause. We find it and fix them for you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="problems" data-screen-label="Problems" style="padding:clamp(64px,12vw,96px) 24px;border-top:1px solid #333533">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">Scenarios</span>
+      <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#E8EDDF;text-transform:uppercase">Problems We Solve</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div role="tablist" style="display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -24px;padding:0 24px">
+        <sc-for list="{{ problems }}" as="p" hint-placeholder-count="3">
+          <sc-if value="{{ p.active }}" hint-placeholder-val="{{ false }}">
+            <button role="tab" aria-selected="true" onClick="{{ p.select }}" style="all:unset;box-sizing:border-box;cursor:pointer;flex:1 0 220px;scroll-snap-align:start;scroll-margin-left:24px;display:flex;flex-direction:column;gap:6px;padding:20px 24px;border-radius:16px;background:#333533;border:1px solid #F5CB5C">
+              <span style="font-family:var(--cc-font-display);font-size:24px;color:#F5CB5C">{{ p.num }}</span>
+              <span style="font-size:18px;font-weight:700;color:#E8EDDF">{{ p.title }}</span>
+            </button>
+          </sc-if>
+          <sc-if value="{{ p.inactive }}" hint-placeholder-val="{{ true }}">
+            <button role="tab" aria-selected="false" onClick="{{ p.select }}" style="all:unset;box-sizing:border-box;cursor:pointer;flex:1 0 220px;scroll-snap-align:start;scroll-margin-left:24px;display:flex;flex-direction:column;gap:6px;padding:20px 24px;border-radius:16px;background:transparent;border:1px solid #333533;transition:border-color 0.2s ease, background 0.2s ease" style-hover="border-color:#5b6b5f;background:#2c2d2b">
+              <span style="font-family:var(--cc-font-display);font-size:24px;color:#CFDBD5">{{ p.num }}</span>
+              <span style="font-size:18px;font-weight:700;color:#CFDBD5">{{ p.title }}</span>
+            </button>
+          </sc-if>
+        </sc-for>
+      </div>
+      <div role="tabpanel" style="min-width:0">
+        <sc-for list="{{ problems }}" as="p" hint-placeholder-count="1">
+          <sc-if value="{{ p.active }}" hint-placeholder-val="{{ false }}">
+            <div style="background:#333533;border-radius:20px;overflow:hidden;display:flex;flex-wrap:wrap;align-items:flex-start">
+              <div style="flex:1 1 360px;min-width:0;max-width:100%;aspect-ratio:1/1;overflow:hidden;background:#242423">
+                <image-slot id="{{ p.slotId }}" shape="rect" placeholder="{{ p.slotLabel }}"></image-slot>
+              </div>
+              <div style="flex:1 1 360px;min-width:0;padding:clamp(24px,6vw,40px);display:flex;flex-direction:column;gap:28px">
+                <div style="display:flex;flex-direction:column;gap:12px">
+                  <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">The problem</span>
+                  <p style="margin:0;font-size:22px;line-height:1.45;color:#E8EDDF;text-wrap:pretty">{{ p.pain }}</p>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:12px">
+                  <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">How we fix it</span>
+                  <div style="display:flex;flex-direction:column">
+                    <sc-for list="{{ p.fix }}" as="f" hint-placeholder-count="3">
+                      <div style="display:flex;flex-wrap:wrap;gap:6px 16px;padding:14px 0;border-top:1px solid #5b6b5f">
+                        <span style="flex:0 0 96px;font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#CFDBD5;padding-top:3px">{{ f.label }}</span>
+                        <span style="flex:1 1 200px;min-width:0;font-size:16px;line-height:1.6;color:#CFDBD5;text-wrap:pretty">{{ f.text }}</span>
+                      </div>
+                    </sc-for>
+                  </div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:8px;padding-top:20px;border-top:1px solid #5b6b5f">
+                  <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">The outcome</span>
+                  <p style="margin:0;font-size:18px;font-weight:700;line-height:1.5;color:#E8EDDF;text-wrap:pretty">{{ p.outcome }}</p>
+                </div>
+              </div>
+            </div>
+          </sc-if>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" data-screen-label="Services" style="padding:clamp(64px,12vw,96px) 24px">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">Services</span>
+      <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#E8EDDF;text-transform:uppercase">Our Approach</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px">
+      <sc-for list="{{ services }}" as="s" hint-placeholder-count="3">
+        <div style="background:#333533;border:1px solid #333533;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;position:relative" style-hover="border-color:#F5CB5C;transform:scale(1.04);box-shadow:0 24px 48px rgba(0,0,0,0.45);z-index:2">
+          <div style="width:100%;aspect-ratio:1/1;overflow:hidden;background:#242423">
+            <image-slot id="{{ s.slotId }}" shape="rect" placeholder="{{ s.slotLabel }}"></image-slot>
+          </div>
+          <div style="padding:28px 32px 32px;display:flex;flex-direction:column;gap:16px">
+            <span style="font-family:var(--cc-font-display);font-size:32px;color:#F5CB5C">{{ s.num }}</span>
+            <h3 style="margin:0;font-size:22px;font-weight:700;color:#E8EDDF">{{ s.title }}</h3>
+            <p style="margin:0;font-size:16px;line-height:1.65;color:#CFDBD5;text-wrap:pretty">{{ s.copy }}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="compare" data-screen-label="Comparison" style="background:#333533;padding:clamp(64px,12vw,96px) 24px">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">Why Choose Us</span>
+      <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#E8EDDF;text-transform:uppercase">The Connected Commons Advantage</h2>
+    </div>
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid #5b6b5f;border-radius:20px">
+      <table style="width:100%;min-width:820px;border-collapse:collapse;font-size:15px;line-height:1.55">
+        <thead>
+          <tr>
+            <th style="text-align:left;padding:20px;position:sticky;left:0;background:#333533;color:#CFDBD5;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;width:150px">Feature</th>
+            <th style="text-align:left;padding:20px;color:#CFDBD5;font-weight:700;font-size:16px">Traditional SaaS + Outsourcing</th>
+            <th style="text-align:left;padding:20px;color:#CFDBD5;font-weight:700;font-size:16px">Hiring Permanent Staff</th>
+            <th style="text-align:left;padding:20px;background:#F5CB5C;color:#242423;font-weight:800;font-size:16px">Connected Commons Model</th>
+          </tr>
+        </thead>
+        <tbody>
+          <sc-for list="{{ rows }}" as="r" hint-placeholder-count="5">
+            <tr style="border-top:1px solid #5b6b5f">
+              <th style="text-align:left;vertical-align:top;padding:20px;position:sticky;left:0;background:#333533;color:#E8EDDF;font-weight:700">{{ r.f }}</th>
+              <td style="vertical-align:top;padding:20px;color:#CFDBD5">{{ r.saas }}</td>
+              <td style="vertical-align:top;padding:20px;color:#CFDBD5">{{ r.staff }}</td>
+              <td style="vertical-align:top;padding:20px;background:#242423;color:#E8EDDF;font-weight:500;border-left:2px solid #F5CB5C">{{ r.cc }}</td>
+            </tr>
+          </sc-for>
+        </tbody>
+      </table>
+    </div>
+    <span style="font-size:13px;color:#CFDBD5">Scroll horizontally on small screens →</span>
+  </div>
+</section>
+
+<dc-import name="Discovery Offer" hint-size="100%,820px"></dc-import>
+
+<footer id="contact" data-screen-label="Footer" style="background:#1c1c1b;border-top:1px solid #333533;padding:72px 24px 40px">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:48px">
+    <div style="display:grid;grid-template-columns:{{ footerCols }};gap:40px 32px">
+      <div style="min-width:0;display:flex;flex-direction:column;gap:16px;max-width:420px">
+        <a href="#hero" aria-label="Connected Commons home" style="display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;letter-spacing:-0.01em;color:#E8EDDF" style-hover="color:#E8EDDF"><img src="assets/logo-mark-white.png" alt="" style="width:36px;height:36px;display:block"><span style="display:flex">connected<span style="color:#F5CB5C">commons</span></span></a>
+        <p style="margin:0;font-size:16px;line-height:1.6;color:#E8EDDF">AI business solutions for Southeast Asia</p>
+        <p style="margin:0;font-size:14px;line-height:1.7;color:#CFDBD5;text-wrap:pretty"><span style="border-bottom:1px dashed #F5CB5C">[REGISTERED COMPANY NAME]</span> · UEN <span style="border-bottom:1px dashed #F5CB5C">[UEN]</span> · SSIC 70201 – Management Consultancy</p>
+        <p style="margin:0;font-size:14px;color:#CFDBD5">© 2026 Connected Commons. All rights reserved.</p>
+      </div>
+    <nav aria-label="Company" style="min-width:0;display:flex;flex-direction:column;gap:18px">
+      <h2 style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#CFDBD5;margin:0">Company</h2>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px">
+        <li><a href="#about" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">About</a></li>
+        <li><a href="#root-cause" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">How we work</a></li>
+        <li><a href="#what-we-solve" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Solutions</a></li>
+        <li><a href="#" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Who we work with</a></li>
+        <li><a href="#" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">FAQ</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Legal" style="min-width:0;display:flex;flex-direction:column;gap:18px">
+      <h2 style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#CFDBD5;margin:0">Legal</h2>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px">
+        <li><a href="privacy-policy.html" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Privacy Policy</a></li>
+        <li><a href="terms-of-use.html" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Terms of Use</a></li>
+        <li><a href="cookie-policy.html" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Cookie Policy</a></li>
+        <li><a href="#" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Disclaimer</a></li>
+        <li><a href="#" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Engagement Terms</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Contact" style="min-width:0;display:flex;flex-direction:column;gap:18px">
+      <h2 style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#CFDBD5;margin:0">Contact</h2>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px">
+        <li><a href="mailto:hello@connectedcommons.co" style="font-size:14px;line-height:1.4;color:#E8EDDF;overflow-wrap:anywhere" style-hover="color:#F5CB5C">hello@connectedcommons.co</a></li>
+        <li><a href="{{ waUrl }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 01-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1121 11.5z"></path></svg>WhatsApp</a></li>
+        <li><a href="#" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Book a call</a></li>
+        <li><a href="#" target="_blank" rel="noopener" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">LinkedIn</a></li>
+        <li><a href="#" target="_blank" rel="noopener" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Twitter/X</a></li>
+      </ul>
+    </nav>
+    </div>
+    <p style="margin:0;padding-top:24px;border-top:1px solid #333533;font-size:13px;line-height:1.7;color:#A8A8A2;text-wrap:pretty;max-width:90ch">Connected Commons provides business consulting. We do not provide legal, tax, accounting or financial advice. Corporate services are delivered through licensed partners.</p>
+  </div>
+</footer>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#242423"></rect><circle cx="42" cy="50" r="16" fill="none" stroke="#F5CB5C" stroke-width="5"></circle><circle cx="58" cy="50" r="16" fill="none" stroke="#E8EDDF" stroke-width="5"></circle></svg></template></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showAnimSlot&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;whatsappNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;6580349668&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;deckUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;assets/connected-commons-solutions-scenarios-deck.pdf&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  solveTrackRef = React.createRef();
+  solvePaused = false;
+  componentDidMount() {
+    this.navMq = window.matchMedia('(max-width: 760px)');
+    this.onNavMq = () => this.setState({ mobile: this.navMq.matches, menuOpen: false });
+    this.navMq.addEventListener?.('change', this.onNavMq);
+    this.onNavMq();
+    this.solveTimer = setInterval(() => { if (!this.solvePaused) this.solveStep(1); }, 5000);
+  }
+  componentWillUnmount() { clearInterval(this.solveTimer); this.navMq?.removeEventListener?.('change', this.onNavMq); }
+  solveCards() { const el = this.solveTrackRef.current; return el ? [...el.querySelectorAll('[data-solve-card]')] : []; }
+  solveGo(i) {
+    const el = this.solveTrackRef.current, cards = this.solveCards();
+    if (!el || !cards.length) return;
+    const n = cards.length, idx = ((i % n) + n) % n;
+    el.scrollTo({ left: cards[idx].offsetLeft - cards[0].offsetLeft, behavior: 'smooth' });
+  }
+  solveStep(dir) {
+    const el = this.solveTrackRef.current; if (!el) return;
+    const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4;
+    if (dir > 0 && atEnd) return this.solveGo(0);
+    if (dir < 0 && el.scrollLeft <= 4) return this.solveGo(this.solveCards().length - 1);
+    this.solveGo((this.state?.solveIdx ?? 0) + dir);
+  }
+  arcCtrl(SG, x, y) {
+    const mx = (SG[0] + x) / 2, my = (SG[1] + y) / 2;
+    const dx = x - SG[0], dy = y - SG[1], len = Math.hypot(dx, dy);
+    const bow = len * 0.22;
+    return [mx + (dy / len) * bow * (dx < 0 ? -1 : 1), my - Math.abs(dx / len) * bow - bow * 0.3, len];
+  }
+  buildMap2(cfg, run, cities, SG, P) {
+    const h = React.createElement;
+    const groups = cities.map(([name, x, y], i) => {
+      const [cx, cy, len] = this.arcCtrl(SG, x, y);
+      const n = Math.max(8, Math.round(len / 13));
+      const start = cfg.intro + i * cfg.interval;
+      const dots = [];
+      for (let j = 1; j <= n; j++) {
+        const t = j / (n + 1), u = 1 - t;
+        const px = u * u * SG[0] + 2 * u * t * cx + t * t * x, py = u * u * SG[1] + 2 * u * t * cy + t * t * y;
+        dots.push(h("circle", { key: j, className: "cc-dot", cx: px.toFixed(1), cy: py.toFixed(1), r: 1.25, fill: "#FFFFFF", opacity: 0, style: { animation: `ccDot ${P}s linear ${(start + t * cfg.travel).toFixed(2)}s infinite` } }));
+      }
+      return h("g", { key: name }, dots,
+        h("circle", { cx: x, cy: y, r: 1.8, fill: "#FFFFFF", opacity: 0.5, style: { animation: `ccArrive2 ${P}s ease-out ${(start + cfg.travel).toFixed(2)}s infinite` } }));
+    });
+    const W = "max(170cqw, 185cqh)";
+    const [sx, sy] = SG;
+    return h("div", { key: run, className: "cc-anim", "aria-hidden": true, style: { position: "absolute", zIndex: -2, width: W, aspectRatio: "1024 / 572", left: `calc(66cqw - ${(sx / 1024).toFixed(4)} * ${W})`, top: `calc(54cqh - ${(sy / 1024).toFixed(4)} * ${W})`, pointerEvents: "none" } },
+      h("div", { style: { position: "absolute", inset: 0, transformOrigin: `${(sx / 10.24).toFixed(1)}% ${(sy / 5.72).toFixed(1)}%`, animation: `ccIntro ${cfg.intro}s cubic-bezier(.22,.61,.36,1) both` } },
+        h("div", { style: { position: "absolute", inset: 0, transformOrigin: `${(sx / 10.24).toFixed(1)}% ${(sy / 5.72).toFixed(1)}%`, animation: `ccDrift ${cfg.drift}s ease-in-out ${cfg.intro}s infinite` } },
+          h("img", { src: "assets/sea-map-clean.jpg", alt: "", style: { position: "absolute", inset: 0, width: "100%", height: "100%", display: "block" } }),
+          h("svg", { viewBox: "0 0 1024 572", style: { position: "absolute", inset: 0, width: "100%", height: "100%", overflow: "visible" } },
+            groups,
+            h("circle", { cx: sx, cy: sy, r: 3, fill: "none", stroke: "#F5CB5C", strokeWidth: 0.7, style: { animation: `ccRing ${cfg.interval}s ease-out ${cfg.intro}s infinite` } }),
+            h("g", { style: { animation: `ccPinDrop 0.9s cubic-bezier(.3,1.4,.5,1) ${cfg.intro * 0.75}s both` } },
+              h("path", { d: `M${sx},${sy} C${sx - 2},${sy - 5} ${sx - 6.5},${sy - 8.5} ${sx - 6.5},${sy - 14} A6.5,6.5 0 1 1 ${sx + 6.5},${sy - 14} C${sx + 6.5},${sy - 8.5} ${sx + 2},${sy - 5} ${sx},${sy} Z`, fill: "rgba(36,36,35,0.55)", stroke: "#F5CB5C", strokeWidth: 1.1, strokeLinejoin: "round" }),
+              h("circle", { cx: sx, cy: sy - 14, r: 2.2, fill: "none", stroke: "#F5CB5C", strokeWidth: 1 }),
+              h("text", { x: sx + 11, y: sy - 10, fill: "#E8EDDF", style: { font: "400 9px Figtree, system-ui, sans-serif", letterSpacing: "0.22em" } }, "SINGAPORE")
+            )
+          )
+        )
+      )
+    );
+  }
+  heroMap() {
+    const SG = [407, 330];
+    const cities = [
+      ["Jakarta", 478, 448], ["Bangkok", 372, 190], ["Ho Chi Minh City", 452, 222],
+      ["Manila", 645, 170], ["Hong Kong", 538, 92], ["Shanghai", 700, 26],
+      ["Chennai", 105, 245], ["Mumbai", 30, 180]
+    ];
+    const cfg = { intro: 9, drift: 30, interval: 2.6, travel: 2.2 };
+    return this.buildMap2(cfg, "hero", cities, SG, cities.length * cfg.interval);
+  }
+  renderVals() {
+    const num = this.props.whatsappNumber ?? "1234567890";
+    const PROBLEMS = [
+      { num: "01", title: "Customer service that can't keep up", pain: "Enquiries arrive in three languages across WhatsApp, email and Instagram. Your team answers the same questions all day, weekend messages wait until Monday, and another hire looks like the only option.", fix: [["AI", "A multilingual assistant that answers FAQs and order questions around the clock."], ["People", "A Philippines-based VA handling escalations and complaints."], ["Process", "One CS playbook and knowledge base that both work from."]], outcome: "First response in minutes, weekend coverage, and no extra Singapore hire." },
+      { num: "02", title: "A dev team you can't afford locally", pain: "You need more developers for the next milestone. A Singapore team would eat a large share of your runway, and local hiring takes months.", fix: [["People", "A dedicated Indonesia-based dev team, placed through a vetted partner."], ["AI", "AI-assisted coding and code review to lift output per developer."], ["Process", "Delivery SOPs, a sprint cadence and weekly reporting to the founders."]], outcome: "A working team in weeks, at a fraction of the equivalent Singapore cost." },
+      { num: "03", title: "Invoice fraud that gets paid", pain: "A trusted supplier emails new bank details from a familiar thread, and finance pays. The supplier's mailbox was compromised weeks earlier, and nothing in your process caught it.", fix: [["AI", "Email security that flags spoofed senders, lookalike domains and unusual payment requests."], ["People", "A managed security partner monitoring accounts and responding to alerts."], ["Process", "A call-back rule for bank changes, multi-factor login, phishing drills and an incident playbook."]], outcome: "Fraud caught at the verification step, and a baseline towards Singapore's Cyber Essentials mark." }
+    ];
+    const activeProblem = this.state?.activeProblem ?? 0;
+    const problems = PROBLEMS.map((p, i) => ({ ...p, fix: p.fix.map(([label, text]) => ({ label, text })), active: i === activeProblem, inactive: i !== activeProblem, slotId: "problem-" + (i + 1), slotLabel: "Scenario " + p.num + " image", select: () => this.setState({ activeProblem: i }) }));
+    const painPoints = [
+      { num: "01", title: "Costs keep climbing", copy: "Singapore salaries and rents make every new hire a big bet for a small team." },
+      { num: "02", title: "Tools nobody uses", copy: "Subscriptions get bought, half set up, then quietly abandoned." },
+      { num: "03", title: "Too Many Vendors", copy: "Five providers, five contracts, and your staff are still handling brain-numbing admin & processes" }
+    ];
+    const ICON = (p) => 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#F5CB5C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">' + p + '</svg>');
+    const solveAreas = [
+      { fn: "Customer & Sales", icon: ICON('<path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/><path d="M21 16v2a4 4 0 0 1-4 4h-5"/>'), symptom: "Same questions all day. Staff burning out", solution: "CS assistant + multilingual VAs", outcome: "Fast, accurate AI answers. Leads followed up" },
+      { fn: "Operations & Admin", icon: ICON('<rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4M12 16h4M8 11h.01M8 16h.01"/>'), symptom: "Clunky admin drains morale and retention", solution: "Workflow automation + ops VAs and SOPs", outcome: "Free up admin time for managers" },
+      { fn: "Finance & Payments", icon: ICON('<path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/>'), symptom: "Manual invoice entry eats into real work", solution: "Invoice processing + accounting partner", outcome: "Faster month-end, no hand-keyed invoices" },
+      { fn: "People & Talent", icon: ICON('<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>'), symptom: "Slow hiring, too many applicants, few good hires", solution: "Screening support + dev, VA and HR outsourcing", outcome: "Regional hires trained and ready for you" },
+      { fn: "Knowledge & Security", icon: ICON('<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>'), symptom: "Know-how leaves with staff. Hacks go unnoticed", solution: "Private knowledge centre + security partner", outcome: "Knowledge retained, cyber risks managed" },
+      { fn: "Market Entry & Setup", icon: ICON('<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/>'), symptom: "One person juggling five vendors", solution: "Setup checklists + corporate services panel", outcome: "One partner runs the vendors. You run the business" }
+    ];
+    const solveIdx = this.state?.solveIdx ?? 0;
+    const solveDots = solveAreas.map((a, i) => ({ label: 'Show ' + a.fn, w: i === solveIdx ? '24px' : '8px', bg: i === solveIdx ? '#F5CB5C' : '#5b6b5f', go: () => this.solveGo(i) }));
+    const mobile = !!this.state?.mobile, menuOpen = mobile && !!this.state?.menuOpen;
+    return {
+      isMobile: mobile,
+      isDesktop: !mobile,
+      menuOpen,
+      footerCols: mobile ? 'minmax(0,1fr)' : 'minmax(0,1.5fr) minmax(0,0.8fr) minmax(0,0.8fr) minmax(0,1.3fr)',
+      menuExpanded: menuOpen ? 'true' : 'false',
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      heroOverlay: mobile ? 'linear-gradient(180deg, rgba(36,36,35,0.88) 0%, rgba(36,36,35,0.78) 60%, rgba(36,36,35,0.95) 100%)' : 'linear-gradient(90deg, rgba(36,36,35,1) 0%, rgba(36,36,35,0.97) 20%, rgba(36,36,35,0.8) 32%, rgba(36,36,35,0.45) 43%, rgba(36,36,35,0.12) 51%, rgba(36,36,35,0) 55%)',
+      solveTrack: this.solveTrackRef,
+      solveDots,
+      solvePause: () => { this.solvePaused = true; },
+      solveResume: () => { this.solvePaused = false; },
+      solvePrev: () => this.solveStep(-1),
+      solveNext: () => this.solveStep(1),
+      solveOnScroll: () => {
+        const el = this.solveTrackRef.current, cards = this.solveCards(); if (!el || !cards.length) return;
+        const x = el.scrollLeft + cards[0].offsetLeft;
+        let best = 0; cards.forEach((c, i) => { if (Math.abs(c.offsetLeft - x) < Math.abs(cards[best].offsetLeft - x)) best = i; });
+        if (el.scrollLeft + el.clientWidth >= el.scrollWidth - 4) best = Math.max(best, cards.length - 1 - Math.max(0, Math.round(el.clientWidth / cards[0].offsetWidth) - 1));
+        if (best !== (this.state?.solveIdx ?? 0)) this.setState({ solveIdx: best });
+      },
+      painPoints,
+      solveAreas,
+      problems,
+      showAnimSlot: this.props.showAnimSlot ?? true,
+      heroMap: this.heroMap(),
+      deckUrl: this.props.deckUrl ?? "assets/connected-commons-solutions-scenarios-deck.pdf",
+      waUrl: `https://wa.me/${num}?text=${encodeURIComponent("I need help solving a business problem")}`,
+      services: [
+        { num: "01", slotId: "approach-img-1", slotLabel: "Fact-Finding image", title: "Fact-Finding", copy: "Paid discovery to diagnose business problems, map pain points, and define success metrics. You get a written report with clear recommendations." },
+        { num: "02", slotId: "approach-img-2", slotLabel: "Solutions Development image", title: "Solutions Development", copy: "We build, test, and implement tailored solutions—including ops systems, corporate tooling, SOPs, and regional support—before handing over a working framework." },
+        { num: "03", slotId: "approach-img-3", slotLabel: "Growth Management image", title: "Growth Management", copy: "Optional operational retainer for ongoing oversight, tooling maintenance, and business growth management." }
+      ],
+      options: [
+        { label: "Option A", title: "Problem Fact-Finding", price: "$1,000", includes: "Paid discovery session with written diagnostic report and recommendations. You keep the report." },
+        { label: "Option B", title: "Solutions Development", price: "Custom Quote", includes: "End-to-end build, testing, and implementation of ops systems & corporate tooling. (Excludes third-party licenses)." },
+        { label: "Option C", title: "Growth Retainer (Optional)", price: "Custom Quote", includes: "Ongoing management of tooling, ops oversight, and business growth support." }
+      ],
+      rows: [
+        { f: "Cost", saas: "Multiple subscriptions ($5k–$15k/year) + integration fees", staff: "Salary + benefits + overheads per person (~$60k+/year each)", cc: "One predictable project or retainer fee (Fraction of both)" },
+        { f: "Setup Time", saas: "2–4 weeks per tool; integration friction common", staff: "4–8 weeks hiring cycle, plus training ramp-up", cc: "Solutions tested and delivered faster with existing framework" },
+        { f: "Accountability", saas: "Each vendor owns their piece; you manage the silos", staff: "Performance management on your shoulders", cc: "We own the outcome and stay accountable for results" },
+        { f: "Flexibility", saas: "Locked into annual contracts even if not used", staff: "Difficult to scale down when needs change", cc: "Pay only for what you need; scale up or down with demand" },
+        { f: "Expertise", saas: "Generic tools, often underutilized", staff: "May lack specialized industry knowledge", cc: "Built-in SEA expertise, compliance-grade AI, tested frameworks" }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="_ds/connected-commons-design-system-58efd043-a97f-4be3-b09b-667d77e0b78f/styles.css">
+<script src="_ds/connected-commons-design-system-58efd043-a97f-4be3-b09b-667d77e0b78f/_ds_bundle.js"></script>
+<style>
+html{background:#1a1a19}
+body{margin:0;background:#1a1a19;color:#E8EDDF;font-family:var(--cc-font-body);-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#F5CB5C;text-decoration:none}
+a:hover{color:#E8EDDF}
+@keyframes ccIntro{0%{transform:scale(1.32) rotate(-3deg);opacity:0}25%{opacity:1}100%{transform:scale(1) rotate(0deg);opacity:1}}
+@keyframes ccDrift{0%{transform:scale(1) translate(0,0) rotate(0deg)}50%{transform:scale(1.06) translate(-1.2%,0.6%) rotate(0.6deg)}100%{transform:scale(1) translate(0,0) rotate(0deg)}}
+@keyframes ccPulse{0%{stroke-dashoffset:10;opacity:1}14%{stroke-dashoffset:-100;opacity:1}14.01%,100%{stroke-dashoffset:-100;opacity:0}}
+@keyframes ccArrive{0%,12%{r:2.6;opacity:0.55}15%{r:6;opacity:1}24%,100%{r:2.6;opacity:0.55}}
+@keyframes ccArcIn{0%{opacity:0}100%{opacity:1}}
+@keyframes ccPinDrop{0%{transform:translateY(-40px);opacity:0}60%{transform:translateY(3px);opacity:1}100%{transform:translateY(0);opacity:1}}
+@keyframes ccDot{0%{opacity:0}1.5%{opacity:1}18%{opacity:0.85}42%,100%{opacity:0}}
+@keyframes ccArrive2{0%{r:1.8;opacity:0.5}3%{r:3.6;opacity:1}20%,100%{r:1.8;opacity:0.5}}
+@keyframes ccRing{0%{r:4;opacity:0.7}100%{r:26;opacity:0}}
+@media (prefers-reduced-motion: reduce){.cc-anim,.cc-anim *{animation:none !important}.cc-pulse,.cc-dot{opacity:0 !important}}
+</style>
+</helmet>
+
+<section data-screen-label="Hero animation — 1a refined" style="padding:72px;display:flex;flex-direction:column;gap:40px">
+  <div style="display:flex;flex-direction:column;gap:8px;max-width:900px">
+    <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">Turn 2 · Hero animation</span>
+    <h1 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:44px;color:#E8EDDF;text-transform:uppercase">Orbital view — 1a refined</h1>
+    <p style="margin:0;font-size:17px;line-height:1.6;color:#CFDBD5;text-wrap:pretty">Builds on <a href="#1a">1a</a>: clean map image, smaller outlined pin, lighter label, 30s drift, and white dot trails that appear toward each city and slowly fade.</p>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start">
+    <sc-for list="{{ turn2 }}" as="v" hint-placeholder-count="1">
+      <div id="{{ v.id }}" style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+          <span style="background:#F5CB5C;color:#242423;font-weight:800;font-size:15px;padding:4px 12px;border-radius:999px">{{ v.id }}</span>
+          <span style="font-size:20px;font-weight:700;color:#E8EDDF">{{ v.name }}</span>
+          <span style="font-size:15px;color:#CFDBD5">{{ v.spec }}</span>
+          <button onClick="{{ v.replay }}" style="margin-left:auto;background:transparent;border:1.5px solid #5b6b5f;color:#E8EDDF;font:600 14px var(--cc-font-body);padding:6px 14px;border-radius:999px;cursor:pointer" style-hover="border-color:#F5CB5C;color:#F5CB5C">Replay intro</button>
+        </div>
+        <div style="width:1280px;height:720px;border-radius:16px;overflow:hidden;border:1px solid #333533;background:#242423;display:flex;flex-direction:column">
+          <div style="height:64px;flex:none;border-bottom:1px solid #333533;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:rgba(36,36,35,0.92);position:relative;z-index:3">
+            <span style="display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;color:#E8EDDF"><img src="assets/logo-mark-white.png" alt="" style="width:34px;height:34px;display:block"><span style="display:flex">connected<span style="color:#F5CB5C">commons</span></span></span>
+            <div style="display:flex;gap:28px;align-items:center;font-size:14px;font-weight:500;color:#CFDBD5">
+              <span>About</span><span>Services</span><span>Pricing</span><span>Why Us</span>
+              <span style="font-weight:600;color:#242423;background:#F5CB5C;padding:8px 16px;border-radius:999px">Contact</span>
+            </div>
+          </div>
+          <div style="position:relative;flex:1;overflow:hidden;isolation:isolate;container-type:size;display:flex;align-items:center">
+            {{ v.map }}
+            <div aria-hidden="true" style="position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg, rgba(36,36,35,0.92) 0%, rgba(36,36,35,0.7) 38%, rgba(36,36,35,0) 62%)"></div>
+            <div style="padding:0 72px;max-width:720px;display:flex;flex-direction:column;gap:26px;position:relative;z-index:1">
+              <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:56px;line-height:1.05;color:#E8EDDF;text-transform:uppercase">Your Connection in South East Asia.<span style="display:block;color:#F5CB5C;margin-top:12px;font-size:0.62em;line-height:1.15">360° Business Operations &amp; Corporate Tooling.</span></h2>
+              <p style="margin:0;font-size:19px;line-height:1.6;color:#CFDBD5;max-width:540px">We help SMEs and funded startups solve business problems, develop solutions, and manage growth—at a fraction of traditional subscription costs.</p>
+              <div style="display:flex;gap:14px">
+                <span style="background:#F5CB5C;color:#242423;font-weight:700;font-size:16px;padding:14px 28px;border-radius:999px">Download Strategy Deck</span>
+                <span style="border:1.5px solid #CFDBD5;color:#E8EDDF;font-weight:600;font-size:16px;padding:13px 28px;border-radius:999px">Chat on WhatsApp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section data-screen-label="Hero animation — pacing" style="padding:72px;display:flex;flex-direction:column;gap:40px">
+  <div style="display:flex;flex-direction:column;gap:8px;max-width:900px">
+    <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">Turn 1 · Hero animation</span>
+    <h1 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:44px;color:#E8EDDF;text-transform:uppercase">Orbital view — two pacings</h1>
+    <p style="margin:0;font-size:17px;line-height:1.6;color:#CFDBD5;text-wrap:pretty">Both: zoom-in from orbit on load, then a slow drift loop. Light pulses leave Singapore for each city in turn, on repeat. Live pin and label replace the one in the image. Turning on "reduce motion" shows the still map.</p>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start">
+    <sc-for list="{{ variants }}" as="v" hint-placeholder-count="2">
+      <div id="{{ v.id }}" style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+          <span style="background:#F5CB5C;color:#242423;font-weight:800;font-size:15px;padding:4px 12px;border-radius:999px">{{ v.id }}</span>
+          <span style="font-size:20px;font-weight:700;color:#E8EDDF">{{ v.name }}</span>
+          <span style="font-size:15px;color:#CFDBD5">{{ v.spec }}</span>
+          <button onClick="{{ v.replay }}" style="margin-left:auto;background:transparent;border:1.5px solid #5b6b5f;color:#E8EDDF;font:600 14px var(--cc-font-body);padding:6px 14px;border-radius:999px;cursor:pointer" style-hover="border-color:#F5CB5C;color:#F5CB5C">Replay intro</button>
+        </div>
+        <div style="width:1280px;height:720px;border-radius:16px;overflow:hidden;border:1px solid #333533;background:#242423;display:flex;flex-direction:column">
+          <div style="height:64px;flex:none;border-bottom:1px solid #333533;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:rgba(36,36,35,0.92);position:relative;z-index:3">
+            <span style="display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;color:#E8EDDF"><img src="assets/logo-mark-white.png" alt="" style="width:34px;height:34px;display:block"><span style="display:flex">connected<span style="color:#F5CB5C">commons</span></span></span>
+            <div style="display:flex;gap:28px;align-items:center;font-size:14px;font-weight:500;color:#CFDBD5">
+              <span>About</span><span>Services</span><span>Pricing</span><span>Why Us</span>
+              <span style="font-weight:600;color:#242423;background:#F5CB5C;padding:8px 16px;border-radius:999px">Contact</span>
+            </div>
+          </div>
+          <div style="position:relative;flex:1;overflow:hidden;isolation:isolate;container-type:size;display:flex;align-items:center">
+            {{ v.map }}
+            <div aria-hidden="true" style="position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg, rgba(36,36,35,0.92) 0%, rgba(36,36,35,0.7) 38%, rgba(36,36,35,0) 62%)"></div>
+            <div style="padding:0 72px;max-width:720px;display:flex;flex-direction:column;gap:26px;position:relative;z-index:1">
+              <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:56px;line-height:1.05;color:#E8EDDF;text-transform:uppercase">Your Connection in South East Asia.<span style="display:block;color:#F5CB5C;margin-top:12px;font-size:0.62em;line-height:1.15">360° Business Operations &amp; Corporate Tooling.</span></h2>
+              <p style="margin:0;font-size:19px;line-height:1.6;color:#CFDBD5;max-width:540px">We help SMEs and funded startups solve business problems, develop solutions, and manage growth—at a fraction of traditional subscription costs.</p>
+              <div style="display:flex;gap:14px">
+                <span style="background:#F5CB5C;color:#242423;font-weight:700;font-size:16px;padding:14px 28px;border-radius:999px">Download Strategy Deck</span>
+                <span style="border:1.5px solid #CFDBD5;color:#E8EDDF;font-weight:600;font-size:16px;padding:13px 28px;border-radius:999px">Chat on WhatsApp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { runA: 0, runB: 0 };
+  buildMap(cfg, run) {
+    const h = React.createElement;
+    const SG = [407, 330];
+    const cities = [
+      ["Jakarta", 478, 448], ["Bangkok", 372, 190], ["Ho Chi Minh City", 452, 222],
+      ["Manila", 645, 170], ["Hong Kong", 538, 92], ["Shanghai", 700, 26],
+      ["Chennai", 105, 245], ["Mumbai", 30, 180]
+    ];
+    const N = cities.length, P = N * cfg.interval;
+    if (cfg.v2) return this.buildMap2(cfg, run, cities, SG, P);
+    const arcs = cities.map(([name, x, y], i) => {
+      const mx = (SG[0] + x) / 2, my = (SG[1] + y) / 2;
+      const dx = x - SG[0], dy = y - SG[1], len = Math.hypot(dx, dy);
+      const bow = len * 0.22, cx = mx + (dy / len) * bow * (dx < 0 ? -1 : 1), cy = my - Math.abs(dx / len) * bow - bow * 0.3;
+      const d = `M${SG[0]},${SG[1]} Q${cx.toFixed(1)},${cy.toFixed(1)} ${x},${y}`;
+      const delay = `${cfg.intro + i * cfg.interval}s`;
+      return h("g", { key: name },
+        h("path", { d, fill: "none", stroke: "#F5CB5C", strokeOpacity: 0.16, strokeWidth: 0.8, style: { animation: `ccArcIn 2s ease ${cfg.intro * 0.6}s both` } }),
+        h("path", { className: "cc-pulse", d, fill: "none", stroke: "#F5CB5C", strokeWidth: 2.2, strokeLinecap: "round", pathLength: 100, strokeDasharray: "10 110", strokeDashoffset: 10, filter: "url(#ccGlow)", style: { animation: `ccPulse ${P}s linear ${delay} infinite` } }),
+        h("circle", { cx: x, cy: y, r: 2.6, fill: "#F5CB5C", opacity: 0.55, style: { animation: `ccArrive ${P}s linear ${delay} infinite` } })
+      );
+    });
+    const W = "max(130cqw, 185cqh)";
+    return h("div", { key: run, className: "cc-anim", "aria-hidden": true, style: { position: "absolute", zIndex: -2, width: W, aspectRatio: "1024 / 572", left: `calc(66cqw - 0.397 * ${W})`, top: `calc(54cqh - 0.3223 * ${W})`, pointerEvents: "none" } },
+      h("div", { style: { position: "absolute", inset: 0, transformOrigin: "39.7% 57.7%", animation: `ccIntro ${cfg.intro}s cubic-bezier(.22,.61,.36,1) both` } },
+        h("div", { style: { position: "absolute", inset: 0, transformOrigin: "39.7% 57.7%", animation: `ccDrift ${cfg.drift}s ease-in-out ${cfg.intro}s infinite` } },
+          h("img", { src: "assets/sea-map.jpg", alt: "", style: { position: "absolute", inset: 0, width: "100%", height: "100%", display: "block" } }),
+          h("div", { style: { position: "absolute", left: "33%", top: "37%", width: "25%", height: "31%", background: "radial-gradient(closest-side, #232524 72%, rgba(35,37,36,0) 100%)" } }),
+          h("svg", { viewBox: "0 0 1024 572", style: { position: "absolute", inset: 0, width: "100%", height: "100%", overflow: "visible" } },
+            h("defs", null,
+              h("filter", { id: "ccGlow", x: "-50%", y: "-50%", width: "200%", height: "200%" }, h("feGaussianBlur", { stdDeviation: 1.6, result: "b" }), h("feMerge", null, h("feMergeNode", { in: "b" }), h("feMergeNode", { in: "SourceGraphic" }))),
+              h("radialGradient", { id: "ccHide" }, h("stop", { offset: "0%", stopColor: "#232524", stopOpacity: 1 }), h("stop", { offset: "65%", stopColor: "#232524", stopOpacity: 0.95 }), h("stop", { offset: "100%", stopColor: "#232524", stopOpacity: 0 }))
+            ),
+            arcs,
+            h("circle", { cx: SG[0], cy: SG[1], r: 4, fill: "none", stroke: "#F5CB5C", strokeWidth: 1, style: { animation: `ccRing ${cfg.interval}s ease-out ${cfg.intro}s infinite` } }),
+            h("g", { style: { animation: `ccPinDrop 0.9s cubic-bezier(.3,1.4,.5,1) ${cfg.intro * 0.75}s both` } },
+              h("path", { d: `M${SG[0]},${SG[1]} C${SG[0] - 4},${SG[1] - 10} ${SG[0] - 13},${SG[1] - 17} ${SG[0] - 13},${SG[1] - 28} A13,13 0 1 1 ${SG[0] + 13},${SG[1] - 28} C${SG[0] + 13},${SG[1] - 17} ${SG[0] + 4},${SG[1] - 10} ${SG[0]},${SG[1]} Z`, fill: "#F5CB5C" }),
+              h("circle", { cx: SG[0], cy: SG[1] - 28, r: 5, fill: "#242423" }),
+              h("text", { x: SG[0] + 20, y: SG[1] - 2, fill: "#F5CB5C", style: { font: "800 15px Figtree, system-ui, sans-serif", letterSpacing: "0.12em" } }, "SINGAPORE")
+            )
+          )
+        )
+      )
+    );
+  }
+  arcCtrl(SG, x, y) {
+    const mx = (SG[0] + x) / 2, my = (SG[1] + y) / 2;
+    const dx = x - SG[0], dy = y - SG[1], len = Math.hypot(dx, dy);
+    const bow = len * 0.22;
+    return [mx + (dy / len) * bow * (dx < 0 ? -1 : 1), my - Math.abs(dx / len) * bow - bow * 0.3, len];
+  }
+  buildMap2(cfg, run, cities, SG, P) {
+    const h = React.createElement;
+    const groups = cities.map(([name, x, y], i) => {
+      const [cx, cy, len] = this.arcCtrl(SG, x, y);
+      const n = Math.max(8, Math.round(len / 13));
+      const start = cfg.intro + i * cfg.interval;
+      const dots = [];
+      for (let j = 1; j <= n; j++) {
+        const t = j / (n + 1), u = 1 - t;
+        const px = u * u * SG[0] + 2 * u * t * cx + t * t * x, py = u * u * SG[1] + 2 * u * t * cy + t * t * y;
+        dots.push(h("circle", { key: j, className: "cc-dot", cx: px.toFixed(1), cy: py.toFixed(1), r: 1.25, fill: "#FFFFFF", opacity: 0, style: { animation: `ccDot ${P}s linear ${(start + t * cfg.travel).toFixed(2)}s infinite` } }));
+      }
+      return h("g", { key: name }, dots,
+        h("circle", { cx: x, cy: y, r: 1.8, fill: "#FFFFFF", opacity: 0.5, style: { animation: `ccArrive2 ${P}s ease-out ${(start + cfg.travel).toFixed(2)}s infinite` } }));
+    });
+    const W = "max(130cqw, 185cqh)";
+    const [sx, sy] = SG;
+    return h("div", { key: run, className: "cc-anim", "aria-hidden": true, style: { position: "absolute", zIndex: -2, width: W, aspectRatio: "1024 / 572", left: `calc(66cqw - ${(sx / 1024).toFixed(4)} * ${W})`, top: `calc(54cqh - ${(sy / 1024).toFixed(4)} * ${W})`, pointerEvents: "none" } },
+      h("div", { style: { position: "absolute", inset: 0, transformOrigin: `${(sx / 10.24).toFixed(1)}% ${(sy / 5.72).toFixed(1)}%`, animation: `ccIntro ${cfg.intro}s cubic-bezier(.22,.61,.36,1) both` } },
+        h("div", { style: { position: "absolute", inset: 0, transformOrigin: `${(sx / 10.24).toFixed(1)}% ${(sy / 5.72).toFixed(1)}%`, animation: `ccDrift ${cfg.drift}s ease-in-out ${cfg.intro}s infinite` } },
+          h("img", { src: "assets/sea-map-clean.jpg", alt: "", style: { position: "absolute", inset: 0, width: "100%", height: "100%", display: "block" } }),
+          h("svg", { viewBox: "0 0 1024 572", style: { position: "absolute", inset: 0, width: "100%", height: "100%", overflow: "visible" } },
+            groups,
+            h("circle", { cx: sx, cy: sy, r: 3, fill: "none", stroke: "#F5CB5C", strokeWidth: 0.7, style: { animation: `ccRing ${cfg.interval}s ease-out ${cfg.intro}s infinite` } }),
+            h("g", { style: { animation: `ccPinDrop 0.9s cubic-bezier(.3,1.4,.5,1) ${cfg.intro * 0.75}s both` } },
+              h("path", { d: `M${sx},${sy} C${sx - 2},${sy - 5} ${sx - 6.5},${sy - 8.5} ${sx - 6.5},${sy - 14} A6.5,6.5 0 1 1 ${sx + 6.5},${sy - 14} C${sx + 6.5},${sy - 8.5} ${sx + 2},${sy - 5} ${sx},${sy} Z`, fill: "rgba(36,36,35,0.55)", stroke: "#F5CB5C", strokeWidth: 1.1, strokeLinejoin: "round" }),
+              h("circle", { cx: sx, cy: sy - 14, r: 2.2, fill: "none", stroke: "#F5CB5C", strokeWidth: 1 }),
+              h("text", { x: sx + 11, y: sy - 10, fill: "#E8EDDF", style: { font: "400 9px Figtree, system-ui, sans-serif", letterSpacing: "0.22em" } }, "SINGAPORE")
+            )
+          )
+        )
+      )
+    );
+  }
+  renderVals() {
+    const R = { intro: 9, drift: 30, interval: 2.6, travel: 2.2, v2: true };
+    const A = { intro: 9, drift: 90, interval: 2.6 };
+    const B = { intro: 5, drift: 48, interval: 1.5 };
+    return {
+      turn2: [
+        { id: "2a", name: "1a refined", spec: "9s intro · 30s drift · dot trail every 2.6s", map: this.buildMap(R, "r" + (this.state.runR || 0)), replay: () => this.setState(s => ({ runR: (s.runR || 0) + 1 })) }
+      ],
+      variants: [
+        { id: "1a", name: "Grand", spec: "9s intro · 90s drift · pulse every 2.6s", map: this.buildMap(A, "a" + this.state.runA), replay: () => this.setState(s => ({ runA: s.runA + 1 })) },
+        { id: "1b", name: "Measured", spec: "5s intro · 48s drift · pulse every 1.5s", map: this.buildMap(B, "b" + this.state.runB), replay: () => this.setState(s => ({ runB: s.runB + 1 })) }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

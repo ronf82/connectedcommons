@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="js/support.js"></script>
+<script src="./support.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
-<link rel="stylesheet" href="css/styles.css">
-<script src="js/ds-bundle.js"></script>
+<link rel="stylesheet" href="_ds/connected-commons-design-system-58efd043-a97f-4be3-b09b-667d77e0b78f/styles.css">
+<script src="_ds/connected-commons-design-system-58efd043-a97f-4be3-b09b-667d77e0b78f/_ds_bundle.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&amp;display=swap">
 <style>
@@ -17,9 +17,6 @@ body{margin:0;background:#242423;color:#E8EDDF;font-family:var(--cc-font-body);-
 *{box-sizing:border-box}
 a{color:#F5CB5C;text-decoration:none}
 a:hover{color:#E8EDDF}
-@keyframes ccBadgeBounce{0%,55%,100%{transform:translateY(0) scale(1,1)}62%{transform:translateY(0) scale(1.08,.9)}70%{transform:translateY(-10px) scale(.96,1.06)}78%{transform:translateY(0) scale(1.05,.94)}85%{transform:translateY(-4px) scale(1,1)}92%{transform:translateY(0) scale(1,1)}}
-.cc-badge-bounce{animation:ccBadgeBounce 2.4s ease-in-out infinite}
-@media (prefers-reduced-motion:reduce){.cc-badge-bounce{animation:none !important}}
 </style>
 </helmet>
 <section id="pricing" data-screen-label="Discovery Offer" style="background:#242423;padding:96px 24px;font-family:var(--cc-font-body)">
@@ -70,12 +67,12 @@ a:hover{color:#E8EDDF}
         <div style="height:100%;background:#242423;border:1px solid #5b6b5f;border-radius:18px;padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:22px">
           <div style="display:flex;flex-direction:column;gap:8px">
             <span style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#CFDBD5">2-week discovery · Launch rate</span>
-            <span style="font-size:22px;font-weight:700;color:#E8EDDF">Embedded Fact Finding</span>
+            <span style="font-size:22px;font-weight:700;color:#E8EDDF">Problem Fact-Finding</span>
           </div>
           <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px">
             <span style="font-size:20px;color:#A8A8A2;text-decoration:line-through;text-decoration-thickness:2px"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Was </span>US$2,000</span>
             <span style="font-family:var(--cc-font-display);font-size:clamp(48px,6vw,64px);line-height:1;color:#F5CB5C"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Now </span>US$1,000</span>
-            <span class="cc-badge-bounce" style="background:#F5CB5C;color:#242423;font-size:13px;font-weight:700;letter-spacing:0.08em;padding:6px 10px;border-radius:999px;display:inline-block;transform-origin:center bottom">50% OFF</span>
+            <span style="background:#F5CB5C;color:#242423;font-size:13px;font-weight:700;letter-spacing:0.08em;padding:6px 10px;border-radius:999px">50% OFF</span>
           </div>
           <p style="margin:0;font-size:16px;line-height:1.6;color:#CFDBD5;text-wrap:pretty">Written diagnostic report and recommendations. You keep the report.</p>
           <ol aria-label="How it works" style="list-style:none;margin:0;padding:16px 0 0;border-top:1px solid #5b6b5f;display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;font-size:14px;color:#CFDBD5">
@@ -114,7 +111,7 @@ class Component extends DCLogic {
     const SLIDES = [
       { label: 'The problem', headline: "Stuck on a business problem? Let's isolate it in 2 weeks.", body: 'We find the root cause and hand you a written diagnostic with a clear fix. No guesswork, no vendor pitch.', msg: "Hi Connected Commons, I have a business problem I'd like to talk through. Is the 2-week discovery (US$1,000 launch rate) the right first step?" },
       { label: 'Limited intake', scarcity: true, msg: "Hi Connected Commons, I'd like to check availability for the 2-week discovery (US$1,000 launch rate)." },
-      { label: 'No strings', headline: "Keep the report. Decide what's next on your own terms.", body: 'No obligation to build with us. The diagnostic is yours either way.', msg: "Hi Connected Commons, I'd like to know more about the 2-week discovery and what the written report covers." }
+      { label: 'No strings', headline: "Pay US$1,000. Keep the report. Decide what's next on your own terms.", body: 'No obligation to build with us. The diagnostic is yours either way.', msg: "Hi Connected Commons, I'd like to know more about the 2-week discovery and what the written report covers." }
     ];
     const i = this.state.i;
     const reduce = !!this.mq?.matches;
