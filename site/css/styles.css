@@ -1,7 +1,0 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap');
-@font-face{font-family:'Aqua';src:url('fonts/aqua.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
-:root{
---cc-ink:#242423;--cc-graphite:#333533;--cc-sage:#CFDBD5;--cc-mist:#E8EDDF;--cc-paper:#FBFAF6;--cc-yellow:#F5CB5C;--cc-yellow-deep:#8a6d1f;--cc-sage-text:#5b6b5f;
---cc-font-display:'Aqua',Figtree,system-ui,sans-serif;
---cc-font-body:Figtree,system-ui,sans-serif;
-}
