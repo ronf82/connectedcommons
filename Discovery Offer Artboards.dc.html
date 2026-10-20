@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="_ds/connected-commons-design-system-58efd043-a97f-4be3-b09b-667d77e0b78f/styles.css">
+<style>
+body{margin:0;background:#1a1a19;color:#E8EDDF;font-family:var(--cc-font-body)}
+*{box-sizing:border-box}
+a{color:#F5CB5C;text-decoration:none}
+a:hover{color:#E8EDDF}
+</style>
+</helmet>
+<section style="padding:64px;display:flex;flex-wrap:wrap;gap:64px;align-items:flex-start">
+  <div id="desktop" style="display:flex;flex-direction:column;gap:12px">
+    <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#CFDBD5">Desktop · 1280</span>
+    <div style="width:1280px;border-radius:12px;overflow:hidden;border:1px solid #333533">
+      <dc-import name="Discovery Offer" hint-size="1280px,820px"></dc-import>
+    </div>
+  </div>
+  <div id="mobile" style="display:flex;flex-direction:column;gap:12px">
+    <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#CFDBD5">Mobile · 390</span>
+    <div style="width:390px;border-radius:12px;overflow:hidden;border:1px solid #333533">
+      <dc-import name="Discovery Offer" hint-size="390px,1300px"></dc-import>
+    </div>
+  </div>
+</section>
+</x-dc>
+</body>
+</html>

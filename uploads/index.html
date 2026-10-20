@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags - To be filled with File 2 Content -->
+    <title>Connected Commons | Strategic Business Consulting</title>
+    <meta name="description" content="Placeholder: Company description and unique value proposition will go here.">
+    <meta name="keywords" content="placeholder: keywords from business plan">
+    <meta name="author" content="Connected Commons">
+
+    <!-- Open Graph / Social Media Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.connectedcommons.co/">
+    <meta property="og:title" content="Connected Commons | Business Consulting">
+    <meta property="og:description" content="Placeholder: Social media summary will go here.">
+    <meta property="og:image" content="assets/og-image.png">
+
+    <!-- Tailwind CSS via CDN (For Rapid Prototyping) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config for Dark Mode & Custom Colors -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        // Placeholder: Primary brand color palette will go here
+                        primary: '#F97316', 
+                        secondary: '#E5E7EB',
+                        background: '#0F0F0F'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for Animations -->
+    <style>
+        /* Animation Container Styles - Will hold your external animation */
+        #animation-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        /* Smooth fade-in for content */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-gray-200 font-sans antialiased overflow-x-hidden">
+
+    <!-- Background Animation Container -->
+    <div id="animation-container"></div>
+    <!-- NOTE: You will inject your third-party animation script inside this div in production -->
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-background/80 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo Area -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-xl font-bold tracking-wider text-white">
+                        CONNECTED<span class="text-primary">COMMONS</span>
+                    </a>
+                </div>
+                <!-- Navigation Links -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-sm font-medium hover:text-primary transition-colors">About</a>
+                    <a href="#services" class="text-sm font-medium hover:text-primary transition-colors">Services</a>
+                    <a href="#deck" class="text-sm font-medium hover:text-primary transition-colors">Resources</a>
+                </div>
+                <!-- Mobile Menu Button (Placeholder) -->
+                <div class="md:hidden">
+                    <!-- Will be styled by Claude later -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-16">
+        <div class="max-w-4xl mx-auto px-4 text-center fade-in-up">
+            <!-- Headline Placeholder -->
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Placeholder: Your Main Value Proposition Here
+            </h1>
+            
+            <!-- Sub-headline Placeholder -->
+            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                Placeholder: Secondary supporting text that explains the business model or mission.
+            </p>
+
+            <!-- Call to Action Area -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <!-- Download Deck Button -->
+                <a id="deck-download" 
+                   href="#" 
+                   class="bg-primary hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg transform hover:scale-105 flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Download Strategy Deck
+                </a>
+                
+                <!-- WhatsApp Button -->
+                <a id="whatsapp-contact" 
+                   href="#" 
+                   target="_blank"
+                   class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg transform hover:scale-105 flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.172 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.481 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.442 0-9.884 4.434-9.889 9.884-.001 2.225.651 3.791 1.746 5.534l-.999 3.648 3.742-.981zm11.387-5.061c-.182-.297-.639-.789-1.125-1.148-.989-.742-1.831-.649-2.076-.386-.245.263-1.022 1.028-1.255 1.252-.233.224-.482.263-.843.096-.361-.167-1.523-.624-2.897-2.046-1.078-1.106-1.788-2.38-2.005-2.744-.217-.363-.026-.559.143-.727.154-.153.347-.398.525-.595.177-.196.235-.331.353-.549.118-.217.058-.409-.03-.596-.088-.188-.78-2.039-1.066-2.794-.282-.744-.567-.624-.773-.635-.191-.01-.406-.01-.621-.01s-.568.075-.864.37c-.296.296-1.13 1.013-1.13 2.474s1.157 2.888 1.317 3.101c.16.213 2.256 3.437 5.478 4.832 2.229.972 2.688.782 3.19.728.502-.055 1.606-.655 1.835-1.282.229-.627.229-1.167.16-1.294z"/>
+                    </svg>
+                    Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-black/50">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">About Connected Commons</h2>
+            <p class="text-gray-400 max-w-2xl mx-auto">
+                Placeholder: Content from File 2 describing the consulting business will go here. This area should explain who you serve and the methodology used.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services / Value Section -->
+    <section id="services" class="py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Our Approach</h2>
+            <!-- Grid Placeholder -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-primary transition-colors">
+                    <h3 class="text-xl font-semibold mb-3 text-white">Service Module 1</h3>
+                    <p class="text-gray-400">Placeholder: Description of service offering.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-primary transition-colors">
+                    <h3 class="text-xl font-semibold mb-3 text-white">Service Module 2</h3>
+                    <p class="text-gray-400">Placeholder: Description of service offering.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-primary transition-colors">
+                    <h3 class="text-xl font-semibold mb-3 text-white">Service Module 3</h3>
+                    <p class="text-gray-400">Placeholder: Description of service offering.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-12 border-t border-gray-800 bg-black/50">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <p class="text-xl font-bold text-white">CONNECTED<span class="text-primary">COMMONS</span></p>
+                <p class="text-gray-500 text-sm mt-1">© 2024 Connected Commons. All rights reserved.</p>
+            </div>
+            <!-- Social Links -->
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-primary transition-colors">LinkedIn</a>
+                <a href="#" class="text-gray-400 hover:text-primary transition-colors">Twitter/X</a>
+                <a href="mailto:contact@connectedcommons.co" class="text-gray-400 hover:text-primary transition-colors">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // WhatsApp Link Configuration
+        const whatsappNumber = "1234567890"; // Replace with your actual number (include country code, no +)
+        const preFillMessage = encodeURIComponent("Hello Connected Commons, I am visiting your website and would like to discuss your consulting services.");
+        
+        const whatsappLink = `https://wa.me/${whatsappNumber}?text=${preFillMessage}`;
+        document.getElementById('whatsapp-contact').href = whatsappLink;
+
+        // Download Link Configuration
+        const deckUrl = "/assets/ConnectedCommons_Deck.pdf"; // Or external link like Dropbox/Google Drive
+        document.getElementById('deck-download').href = deckUrl;
+        
+        // Analytics Tracking (Optional placeholder)
+        console.log("Connected Commons Site Loaded Successfully");
+    </script>
+</body>
+</html>

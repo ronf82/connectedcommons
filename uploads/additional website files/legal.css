@@ -1,0 +1,43 @@
+/* Connected Commons legal pages. Tokens match the brand design system. */
+:root{
+  --ink:#242423; --graphite:#333533; --sage:#CFDBD5; --mist:#E8EDDF;
+  --yellow:#F5CB5C; --sage-deep:#5B6B5F;
+  --font:'Figtree',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--sage);font-family:var(--font);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--yellow);text-underline-offset:3px}
+a:hover{color:var(--mist)}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px}
+header.site{border-bottom:1px solid var(--sage-deep);padding:20px 0}
+header.site .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;max-width:1200px}
+.brand{font-weight:800;font-size:20px;letter-spacing:-.01em;color:var(--mist);text-decoration:none}
+.brand span{color:var(--yellow)}
+.back{font-size:15px;text-decoration:none;border:1px solid var(--sage-deep);padding:8px 16px;border-radius:999px;color:var(--mist)}
+.back:hover{border-color:var(--yellow);color:var(--yellow)}
+.hero{padding:72px 0 32px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow);margin:0 0 12px}
+h1{font-size:clamp(34px,5vw,52px);line-height:1.1;font-weight:800;letter-spacing:-.02em;color:var(--mist);margin:0 0 16px}
+.updated{font-size:15px;color:var(--sage);opacity:.85;margin:0}
+.summary{background:var(--graphite);border-radius:20px;padding:24px 28px;margin:32px 0 8px;color:var(--mist)}
+.summary strong{color:var(--yellow)}
+nav.toc{margin:32px 0;padding:0;font-size:15px}
+nav.toc ol{columns:2;column-gap:32px;padding-left:20px;margin:0}
+nav.toc li{margin:4px 0;break-inside:avoid}
+main{padding-bottom:80px}
+h2{font-size:24px;line-height:1.25;font-weight:700;color:var(--mist);margin:48px 0 12px;scroll-margin-top:24px}
+h3{font-size:18px;font-weight:700;color:var(--mist);margin:28px 0 6px}
+p,li{margin:0 0 14px}
+ul{padding-left:22px}
+table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--sage-deep)}
+th{color:var(--mist);background:var(--graphite);font-weight:700}
+.tablewrap{overflow-x:auto}
+footer.site{border-top:1px solid var(--sage-deep);padding:32px 0 48px;font-size:14px}
+footer.site .wrap{max-width:1200px;display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+footer.site nav a{margin-right:20px}
+button.linklike{background:none;border:0;padding:0;font:inherit;color:var(--yellow);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.btn{display:inline-block;background:var(--yellow);color:var(--ink);font-weight:700;border:0;border-radius:999px;padding:12px 24px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none}
+.btn:hover{background:var(--mist);color:var(--ink)}
+@media(max-width:640px){nav.toc ol{columns:1}body{font-size:16px}.hero{padding-top:48px}}
