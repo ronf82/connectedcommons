@@ -27,6 +27,10 @@ a:hover{color:#E8EDDF}
 @keyframes ccArrive2{0%{r:1.8;opacity:0.5}3%{r:3.6;opacity:1}20%,100%{r:1.8;opacity:0.5}}
 @keyframes ccRing{0%{r:4;opacity:0.7}100%{r:26;opacity:0}}
 @media (prefers-reduced-motion: reduce){.cc-anim,.cc-anim *{animation:none !important}.cc-dot{opacity:0 !important}}
+.cc-tabs-wrap::after{content:"";position:absolute;top:0;bottom:0;right:-24px;width:72px;background:linear-gradient(to right,rgba(36,36,35,0),#242423);pointer-events:none;transition:opacity .2s}
+.cc-tabs-wrap.at-end::after{opacity:0}
+.cc-tabs-count{display:none;margin-top:-8px;font-size:13px;font-weight:700;letter-spacing:.14em;color:#CFDBD5}
+@media (max-width:768px){.cc-tabs-count{display:block}}
 </style>
 </helmet>
 
@@ -222,6 +226,7 @@ a:hover{color:#E8EDDF}
       <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#E8EDDF;text-transform:uppercase">Problems We Solve</h2>
     </div>
     <div style="display:flex;flex-direction:column;gap:24px">
+      <div class="cc-tabs-wrap" style="position:relative">
       <div role="tablist" style="display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -24px;padding:0 24px">
         <sc-for list="{{ problems }}" as="p" hint-placeholder-count="3">
           <sc-if value="{{ p.active }}" hint-placeholder-val="{{ false }}">
@@ -238,6 +243,8 @@ a:hover{color:#E8EDDF}
           </sc-if>
         </sc-for>
       </div>
+      </div>
+      <div class="cc-tabs-count" aria-hidden="true"></div>
       <div role="tabpanel" style="min-width:0">
         <sc-for list="{{ problems }}" as="p" hint-placeholder-count="1">
           <sc-if value="{{ p.active }}" hint-placeholder-val="{{ false }}">
@@ -337,7 +344,7 @@ a:hover{color:#E8EDDF}
       <div style="min-width:0;display:flex;flex-direction:column;gap:16px;max-width:420px">
         <a href="#hero" aria-label="Connected Commons home" style="display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;letter-spacing:-0.01em;color:#E8EDDF" style-hover="color:#E8EDDF"><img src="images/logo-mark-white.png" alt="" style="width:36px;height:36px;display:block"><span style="display:flex">connected<span style="color:#F5CB5C">commons</span></span></a>
         <p style="margin:0;font-size:16px;line-height:1.6;color:#E8EDDF">AI business solutions for Southeast Asia</p>
-        <p style="margin:0;font-size:14px;line-height:1.7;color:#CFDBD5;text-wrap:pretty"><span style="border-bottom:1px dashed #F5CB5C">[REGISTERED COMPANY NAME]</span> · UEN <span style="border-bottom:1px dashed #F5CB5C">[UEN]</span> · SSIC 70201 – Management Consultancy</p>
+        <p style="margin:0;font-size:14px;line-height:1.7;color:#CFDBD5;text-wrap:pretty">Registration &amp; UEN pending · SSIC 70201 – Management Consultancy</p>
         <p style="margin:0;font-size:14px;color:#CFDBD5">© 2026 Connected Commons. All rights reserved.</p>
       </div>
     <nav aria-label="Company" style="min-width:0;display:flex;flex-direction:column;gap:18px">
@@ -346,7 +353,6 @@ a:hover{color:#E8EDDF}
         <li><a href="#about" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">About</a></li>
         <li><a href="#root-cause" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">How we work</a></li>
         <li><a href="#what-we-solve" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Solutions</a></li>
-        <li><a href="#" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Who we work with</a></li>
         <li><a href="/faq.html" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">FAQ</a></li>
       </ul>
     </nav>
@@ -356,8 +362,6 @@ a:hover{color:#E8EDDF}
         <li><a href="privacy-policy.html" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Privacy Policy</a></li>
         <li><a href="terms-of-use.html" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Terms of Use</a></li>
         <li><a href="cookie-policy.html" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Cookie Policy</a></li>
-        <li><a href="#" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Disclaimer</a></li>
-        <li><a href="#" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Engagement Terms</a></li>
       </ul>
     </nav>
     <nav aria-label="Contact" style="min-width:0;display:flex;flex-direction:column;gap:18px">
@@ -365,9 +369,7 @@ a:hover{color:#E8EDDF}
       <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px">
         <li><a href="mailto:hello@connectedcommons.co" style="font-size:14px;line-height:1.4;color:#E8EDDF;overflow-wrap:anywhere" style-hover="color:#F5CB5C">hello@connectedcommons.co</a></li>
         <li><a href="{{ waUrl }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 01-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1121 11.5z"></path></svg>WhatsApp</a></li>
-        <li><a href="#" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Book a call</a></li>
-        <li><a href="#" target="_blank" rel="noopener" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">LinkedIn</a></li>
-        <li><a href="#" target="_blank" rel="noopener" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Twitter/X</a></li>
+        <li><a href="https://calendar.app.google/2oHBsRx1rrcdJVNP6" target="_blank" rel="noopener" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Book a call</a></li>
       </ul>
     </nav>
     </div>
@@ -526,6 +528,36 @@ class Component extends DCLogic {
     };
   }
 }
+</script>
+<script>
+(function(){
+  var raf=0;
+  function update(){
+    var wrap=document.querySelector('.cc-tabs-wrap'); if(!wrap) return;
+    var list=wrap.querySelector('[role="tablist"]'); if(!list) return;
+    wrap.classList.toggle('at-end', list.scrollLeft+list.clientWidth>=list.scrollWidth-4);
+    var count=document.querySelector('.cc-tabs-count'); if(!count) return;
+    var tabs=wrap.querySelectorAll('[role="tab"]'), n=tabs.length, idx=0;
+    tabs.forEach(function(el,k){ if(el.getAttribute('aria-selected')==='true') idx=k; });
+    if(!n) return;
+    var txt=('0'+(idx+1)).slice(-2)+' / '+('0'+n).slice(-2);
+    if(count.textContent!==txt) count.textContent=txt;
+  }
+  function queue(){ cancelAnimationFrame(raf); raf=requestAnimationFrame(update); }
+  document.addEventListener('scroll',queue,true);
+  window.addEventListener('resize',queue);
+  document.addEventListener('click',function(e){
+    var tab=e.target.closest&&e.target.closest('.cc-tabs-wrap [role="tab"]'); if(!tab) return;
+    setTimeout(function(){
+      var sel=document.querySelector('.cc-tabs-wrap [role="tab"][aria-selected="true"]')||tab;
+      sel.scrollIntoView({behavior:'smooth',inline:'start',block:'nearest'});
+      update();
+    },80);
+  });
+  new MutationObserver(queue).observe(document.body,{subtree:true,childList:true,attributes:true,attributeFilter:['aria-selected']});
+  [300,1200,2500].forEach(function(t){ setTimeout(update,t); });
+  update();
+})();
 </script>
 <script src="/cookie-consent.js" defer></script>
 </body>
