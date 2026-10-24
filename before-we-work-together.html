@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Before We Work Together | Connected Commons</title>
+<meta name="description" content="A personal note from Ron Foo, founder of Connected Commons, for anyone considering working with us.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Dancing+Script:wght@600;700&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    /* Connected Commons tokens */
+    --ink: #242423;
+    --graphite: #333533;
+    --sage: #CFDBD5;
+    --mist: #E8EDDF;
+    --paper: #FBFAF6;
+    --yellow: #F5CB5C;
+    --yellow-deep: #8A6D1F;
+    --sage-deep: #5B6B5F;
+
+    --radius-sm: 8px;
+    --radius-lg: 20px;
+    --radius-pill: 999px;
+
+    --sans: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --serif: "Lora", Georgia, "Times New Roman", serif;
+    --script: "Dancing Script", "Brush Script MT", cursive;
+    --signature: "Mrs Saint Delafield", "Segoe Script", "Brush Script MT", cursive;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--ink);
+    color: var(--mist);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- Top bar (dark) ---------- */
+  .topbar { background: var(--ink); color: var(--mist); border-bottom: 1px solid var(--sage-deep); }
+  .topbar .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 76px;
+  }
+  .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+  .brand img { width: 36px; height: 36px; display: block; }
+  .wordmark { font-weight: 800; font-size: 22px; line-height: 1.2; letter-spacing: -0.01em; color: var(--mist); }
+  .wordmark span { color: var(--yellow); }
+  .nav { display: none; gap: 28px; }
+  .nav a { font-size: 14px; font-weight: 500; text-decoration: none; color: var(--sage); }
+  .nav a:hover { color: var(--yellow); }
+  .back {
+    font-size: 14px; font-weight: 500; text-decoration: none; color: var(--sage);
+    display: inline-flex; align-items: center; gap: 8px; padding: 8px 4px; white-space: nowrap;
+  }
+  .back:hover { color: var(--yellow); }
+  .back svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* ---------- Letter section (light) ---------- */
+  .letter-section { padding: 72px 0 96px; }
+  .eyebrow {
+    font-size: 13px; line-height: 1.4; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--yellow); text-align: center;
+  }
+
+  .layout { max-width: 720px; margin: 28px auto 0; }
+
+  .letter {
+    position: relative;
+    max-width: 720px; margin: 0 auto;
+    background: var(--graphite);
+    border: 1px solid var(--sage-deep);
+    border-radius: var(--radius-lg);
+    padding: 64px 64px 56px;
+    
+  }
+  /* soft sage band at the top edge, like a letterhead */
+  .letter::before {
+    content: ""; position: absolute; left: 0; right: 0; top: 0; height: 8px;
+    background: var(--sage-deep); border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+
+  .greeting {
+    font-family: var(--script);
+    font-weight: 700;
+    font-size: clamp(52px, 8vw, 76px);
+    line-height: 1.05;
+    color: var(--mist);
+    margin-bottom: 28px;
+  }
+
+  .letter p {
+    font-family: var(--serif);
+    font-size: 19px; line-height: 1.85; font-weight: 400;
+    color: var(--mist);
+    margin-bottom: 24px;
+    max-width: 62ch;
+  }
+  
+  /* the one yellow moment on the page */
+  mark {
+    background: var(--yellow); color: var(--ink);
+    padding: 0 6px; border-radius: var(--radius-sm);
+    -webkit-box-decoration-break: clone; box-decoration-break: clone;
+    font-weight: 700;
+  }
+
+  .closing { margin-top: 40px; }
+  .letter .closing .sincerely { margin-bottom: 4px; }
+  .signoff {
+    display: flex; align-items: center; gap: 28px; flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  .signature {
+    font-family: var(--signature);
+    font-size: clamp(64px, 11vw, 96px);
+    line-height: 1;
+    color: var(--mist);
+    transform: rotate(-3deg);
+    transform-origin: left center;
+    padding: 8px 4px 0;
+  }
+  /* Desktop portrait: half-body, arched frame with an offset outline and a nameplate */
+  .portrait-desktop { display: none; }
+  .arch { position: relative; width: 100%; max-width: 320px; }
+  .arch::before {
+    content: ""; position: absolute; inset: 0;
+    transform: translate(14px, 14px);
+    border: 1.5px solid var(--sage-deep);
+    border-radius: 160px 160px var(--radius-lg) var(--radius-lg);
+  }
+  .arch img {
+    position: relative; display: block; width: 100%; height: auto; aspect-ratio: 760 / 985;
+    object-fit: cover; object-position: center top;
+    border-radius: 160px 160px var(--radius-lg) var(--radius-lg);
+    background: var(--graphite);
+  }
+  .nameplate { margin-top: 32px; padding-left: 4px; }
+  .nameplate .rule { display: block; width: 40px; height: 2px; background: var(--sage-deep); margin-bottom: 14px; }
+  .nameplate strong { display: block; font-size: 18px; font-weight: 700; color: var(--mist); line-height: 1.3; }
+  .nameplate span { display: block; font-size: 14px; font-weight: 500; color: var(--sage); margin-top: 2px; }
+
+  /* Mobile portrait: round, centred on the face */
+  .portrait {
+    width: 112px; height: 112px; border-radius: 50%;
+    object-fit: cover; object-position: center;
+    border: 3px solid var(--graphite);
+    outline: 2px solid var(--sage-deep);
+    display: block;
+  }
+  .letter p.role { margin: 10px 0 0; font-family: var(--sans); font-size: 14px; line-height: 1.5; font-weight: 500; color: var(--sage); }
+  .role strong { font-weight: 700; color: var(--mist); }
+
+  /* ---------- Call to action (dark) ---------- */
+  .cta { background: var(--graphite); color: var(--mist); padding: 80px 0; text-align: center; }
+  .cta h2 {
+    font-size: clamp(28px, 4vw, 40px); line-height: 1.15; font-weight: 800;
+    letter-spacing: -0.01em; color: var(--mist); max-width: 22ch; margin: 12px auto 0;
+  }
+  .cta .eyebrow { color: var(--yellow); }
+  .cta p { color: var(--sage); font-size: 18px; max-width: 52ch; margin: 18px auto 32px; }
+  .buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--sans); font-size: 16px; font-weight: 700;
+    padding: 14px 26px; border-radius: var(--radius-pill);
+    text-decoration: none; transition: transform .15s ease, border-color .15s ease;
+  }
+  .btn svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .btn-primary { background: var(--yellow); color: var(--ink); }
+  .btn-primary:hover { transform: translateY(-2px); }
+  .btn-secondary { border: 1.5px solid var(--sage); color: var(--mist); }
+  .btn-secondary:hover { border-color: var(--yellow); }
+
+  /* ---------- Footer (mirrors index.html) ---------- */
+  footer { background: var(--ink); color: var(--sage); padding: 56px 0 32px; border-top: 1px solid var(--sage-deep); font-size: 14px; font-weight: 500; }
+  .foot-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 40px; }
+  .foot-brand p { margin-top: 14px; max-width: 32ch; line-height: 1.5; }
+  .foot-brand p.small { font-size: 13px; color: var(--sage); opacity: .85; }
+  footer h3 { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--yellow); margin-bottom: 14px; }
+  footer ul { list-style: none; display: grid; gap: 10px; }
+  footer a { text-decoration: none; }
+  footer a:hover { color: var(--yellow); }
+  footer a[aria-current="page"] { color: var(--mist); }
+  .disclaimer { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--sage-deep); font-size: 13px; line-height: 1.6; max-width: 90ch; }
+  .copy { margin-top: 12px; font-size: 13px; opacity: .85; }
+  @media (max-width: 860px) { .foot-grid { grid-template-columns: 1fr 1fr; } .foot-brand { grid-column: 1 / -1; } }
+
+  a:focus-visible, .btn:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; border-radius: 6px; }
+
+  @media (min-width: 860px) {
+    .nav { display: flex; }
+    .back { display: none; }
+  }
+
+  @media (min-width: 960px) {
+    .layout {
+      max-width: 1100px;
+      display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 56px;
+      align-items: start; justify-content: center;
+    }
+    .portrait-desktop { display: block; position: sticky; top: 40px; padding-right: 14px; justify-self: start; width: 100%; max-width: 334px; }
+    .portrait-round, .letter p.role { display: none; }
+    .signoff { gap: 0; }
+  }
+
+  @media (max-width: 640px) {
+    .letter-section { padding: 40px 0 64px; }
+    .letter { padding: 44px 24px 36px; margin-left: 12px; margin-right: 12px; }
+    .letter p { font-size: 18px; }
+    .topbar .wrap { height: 68px; }
+    .wordmark { font-size: 19px; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Connected Commons home">
+      <img src="images/logo-mark-white.png" alt="" width="36" height="36">
+      <span class="wordmark">connected<span>commons</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#compare">Why Us</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a class="back" href="index.html">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      Back to home
+    </a>
+  </div>
+</header>
+
+<main>
+  <section class="letter-section">
+    <div class="wrap">
+      <p class="eyebrow">Before We Work Together</p>
+
+      <div class="layout">
+      <article class="letter" aria-label="A letter from Ron Foo">
+        <h1 class="greeting">Hi there,</h1>
+
+        <p>If you have gotten this far, I am assuming you're either serious about the vendor you are about to hire or you are doing deep research on a competitor.</p>
+
+        <p>You may also be someone who knows me personally and is rooting for my success. Regardless of your intentions, thank you for coming.</p>
+
+        <p>My 20-odd years of meandering careers have mostly been spent in business development, growth and relationship management, with customer service never far behind. I've never been one to shy away from a career worth exploring. I would rather try it than spend years wondering "what if I did that?"</p>
+
+        <p>From banking and finance to real estate, then logistics, and most recently software development and outsourcing, I've mostly taken on roles centred on building a business from the ground up.</p>
+
+        <p>Over the years, I've learned that regardless of your industry or your position in a company, one trait matters most: the ability to build relationships, networks and <mark>trust</mark> with business partners.</p>
+
+        <p>That starts with being of value to those you serve. Hence, we are committed to always looking after your needs and solving your problems first. We will be honest about what we can and cannot do, and we will work towards helping you grow your business, and grow with you in the process.</p>
+
+        <p>Thank you for visiting our business page and reviewing our services. We welcome any feedback you may have.</p>
+
+        <div class="closing">
+          <p class="sincerely">Yours sincerely,</p>
+          <div class="signoff">
+            <div class="signature" aria-label="Ron Foo">Ron Foo</div>
+            <img class="portrait portrait-round" src="images/ron-foo.jpg" alt="Ron Foo, founder of Connected Commons" width="112" height="112">
+          </div>
+          <p class="role"><strong>Ron Foo</strong> &nbsp;·&nbsp; Founder, Connected Commons</p>
+        </div>
+      </article>
+
+      <aside class="portrait-desktop" aria-label="Ron Foo">
+        <div class="arch">
+          <img src="images/ron-foo-half.jpg" alt="Ron Foo, founder of Connected Commons" width="760" height="985">
+        </div>
+        <div class="nameplate">
+          <span class="rule" aria-hidden="true"></span>
+          <strong>Ron Foo</strong>
+          <span>Founder, Connected Commons</span>
+        </div>
+      </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Let's talk</p>
+      <h2>Let's find what is eating your time.</h2>
+      <p>Book a free 30-minute intro call to talk through the problem you want solved, or send me a note.</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="https://calendar.app.google/2oHBsRx1rrcdJVNP6" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          Book a call
+        </a>
+        <a class="btn btn-secondary" href="mailto:hello@connectedcommons.co">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          hello@connectedcommons.co
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html" aria-label="Connected Commons home">
+          <img src="images/logo-mark-white.png" alt="" width="36" height="36">
+          <span class="wordmark">connected<span>commons</span></span>
+        </a>
+        <p>AI business solutions for Southeast Asia</p>
+        <p class="small">Registration &amp; UEN pending &nbsp;·&nbsp; SSIC 70201 – Management Consultancy</p>
+      </div>
+      <nav aria-label="Company">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#root-cause">How we work</a></li>
+          <li><a href="index.html#what-we-solve">Solutions</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="before-we-work-together.html" aria-current="page">Before We Work Together</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Legal">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-use.html">Terms of Use</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:hello@connectedcommons.co">hello@connectedcommons.co</a></li>
+          <li><a href="https://calendar.app.google/2oHBsRx1rrcdJVNP6" target="_blank" rel="noopener">Book a call</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">Connected Commons provides business consulting. We do not provide legal, tax, accounting or financial advice. Corporate services are delivered through licensed partners.</p>
+    <p class="copy">&copy; 2026 Connected Commons. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
