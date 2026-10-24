@@ -164,13 +164,13 @@
   .role strong { font-weight: 700; color: var(--mist); }
 
   /* ---------- Call to action (dark) ---------- */
-  .cta { background: var(--graphite); color: var(--mist); padding: 80px 0; text-align: center; }
+  .cta { background: var(--cyan-light); color: var(--ink); padding: 80px 0; text-align: center; }
   .cta h2 {
     font-size: clamp(28px, 4vw, 40px); line-height: 1.15; font-weight: 800;
-    letter-spacing: -0.01em; color: var(--mist); max-width: 22ch; margin: 12px auto 0;
+    letter-spacing: -0.01em; color: var(--ink); max-width: 22ch; margin: 12px auto 0;
   }
-  .cta .eyebrow { color: var(--cyan-light); }
-  .cta p { color: var(--fog); font-size: 18px; max-width: 52ch; margin: 18px auto 32px; }
+  .cta .eyebrow { color: #000000; }
+  .cta p { color: var(--ink); font-size: 18px; max-width: 52ch; margin: 18px auto 32px; }
   .buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
   .btn {
     display: inline-flex; align-items: center; gap: 10px;
@@ -179,10 +179,10 @@
     text-decoration: none; transition: transform .15s ease, border-color .15s ease;
   }
   .btn svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-  .btn-primary { background: var(--cyan-action); color: #FFFFFF; }
+  .btn-primary { background: var(--jasmine); color: var(--ink); }
   .btn-primary:hover { transform: translateY(-2px); }
-  .btn-secondary { border: 1.5px solid var(--fog); color: var(--mist); }
-  .btn-secondary:hover { border-color: var(--cyan-light); }
+  .btn-secondary { border: 1.5px solid var(--ink); color: var(--ink); }
+  .btn-secondary:hover { border-color: #000000; }
 
   /* ---------- Footer (mirrors index.html) ---------- */
   footer { background: var(--ink); color: var(--fog); padding: 56px 0 32px; border-top: 1px solid var(--slate); font-size: 14px; font-weight: 500; }
@@ -199,7 +199,7 @@
   @media (max-width: 860px) { .foot-grid { grid-template-columns: 1fr 1fr; } .foot-brand { grid-column: 1 / -1; } }
 
   a:focus-visible, .btn:focus-visible { outline: 3px solid var(--cyan-light); outline-offset: 3px; border-radius: 6px; }
-
+  .cta .btn:focus-visible { outline-color: var(--ink); }
   @media (min-width: 860px) {
     .nav { display: flex; }
     .back { display: none; }
