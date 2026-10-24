@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#2F3235">
 <title>Connected Commons | Business Solutions with AI Consulting</title>
 <meta name="description" content="AI consulting and business solutions for SMEs and funded startups in Southeast Asia. We find the root cause of the problem, then build and test the fix.">
 <link rel="canonical" href="https://www.connectedcommons.co/">
@@ -18,7 +19,7 @@
 </head>
 <body>
 <noscript>
-  <div style="max-width:720px;margin:0 auto;padding:48px 24px;font-family:system-ui,sans-serif;line-height:1.7;color:#E8EDDF">
+  <div style="max-width:720px;margin:0 auto;padding:48px 24px;font-family:system-ui,sans-serif;line-height:1.7;color:#DCDCDD">
     <h1>Your time belongs on growth, not administration.</h1>
     <p>AI and tech solutions that free your leadership for strategic work.</p>
     <p><b>Connected Commons</b> is a Singapore-based business solutions consultancy. We work with foreign SMEs and funded startups to diagnose challenges, develop tailored solutions, and manage operational growth across Southeast Asia.</p>
@@ -34,10 +35,10 @@
 <script src="js/ds-bundle.js"></script>
 <style>
 html{scroll-behavior:smooth}
-body{margin:0;background:#242423;color:#E8EDDF;font-family:var(--cc-font-body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:#2F3235;color:#DCDCDD;font-family:var(--cc-font-body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 *{box-sizing:border-box}
-a{color:#F5CB5C;text-decoration:none}
-a:hover{color:#E8EDDF}
+a{color:#F8D36E;text-decoration:none}
+a:hover{color:#DCDCDD}
 @keyframes ccIntro{0%{transform:scale(1.32) rotate(-3deg);opacity:0}25%{opacity:1}100%{transform:scale(1) rotate(0deg);opacity:1}}
 @keyframes ccDrift{0%{transform:scale(1) translate(0,0) rotate(0deg)}50%{transform:scale(1.06) translate(-1.2%,0.6%) rotate(0.6deg)}100%{transform:scale(1) translate(0,0) rotate(0deg)}}
 @keyframes ccPinDrop{0%{transform:translateY(-40px);opacity:0}60%{transform:translateY(3px);opacity:1}100%{transform:translateY(0);opacity:1}}
@@ -45,38 +46,38 @@ a:hover{color:#E8EDDF}
 @keyframes ccArrive2{0%{r:1.8;opacity:0.5}3%{r:3.6;opacity:1}20%,100%{r:1.8;opacity:0.5}}
 @keyframes ccRing{0%{r:4;opacity:0.7}100%{r:26;opacity:0}}
 @media (prefers-reduced-motion: reduce){.cc-anim,.cc-anim *{animation:none !important}.cc-dot{opacity:0 !important}}
-.cc-tabs-wrap::after{content:"";position:absolute;top:0;bottom:0;right:-24px;width:72px;background:linear-gradient(to right,rgba(36,36,35,0),#242423);pointer-events:none;transition:opacity .2s}
+.cc-tabs-wrap::after{content:"";position:absolute;top:0;bottom:0;right:-24px;width:72px;background:linear-gradient(to right,rgba(47,50,53,0),#2F3235);pointer-events:none;transition:opacity .2s}
 .cc-tabs-wrap.at-end::after{opacity:0}
-.cc-tabs-count{display:none;margin-top:-8px;font-size:13px;font-weight:700;letter-spacing:.14em;color:#CFDBD5}
+.cc-tabs-count{display:none;margin-top:-8px;font-size:13px;font-weight:700;letter-spacing:.14em;color:#B8BDC2}
 @media (max-width:768px){.cc-tabs-count{display:block}}
 </style>
 </helmet>
 
-<nav style="position:sticky;top:0;z-index:50;background:rgba(36,36,35,0.92);backdrop-filter:blur(10px);border-bottom:1px solid #333533">
+<nav style="position:sticky;top:0;z-index:50;background:rgba(47,50,53,0.92);backdrop-filter:blur(10px);border-bottom:1px solid #46494C">
   <div style="max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px">
-    <a href="#hero" aria-label="Connected Commons home" style="display:flex;align-items:center;gap:10px;font-family:var(--cc-font-body);font-weight:800;font-size:clamp(18px,5vw,22px);letter-spacing:-0.01em;color:#E8EDDF;min-width:0" style-hover="color:#E8EDDF"><img src="images/logo-mark-white.png" alt="" style="width:36px;height:36px;display:block"><span style="display:flex">connected<span style="color:#F5CB5C">commons</span></span></a>
+    <a href="#hero" aria-label="Connected Commons home" style="display:flex;align-items:center;gap:10px;font-family:var(--cc-font-body);font-weight:800;font-size:clamp(18px,5vw,22px);letter-spacing:-0.01em;color:#DCDCDD;min-width:0" style-hover="color:#DCDCDD"><img src="images/logo-mark-white.png" alt="" style="width:36px;height:36px;display:block"><span style="display:flex">connected<span style="color:#F8D36E">commons</span></span></a>
     <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
     <div style="display:flex;gap:28px;align-items:center;flex-wrap:wrap;justify-content:flex-end">
-      <a href="#about" style="font-size:14px;font-weight:500;color:#CFDBD5" style-hover="color:#F5CB5C">About</a>
-      <a href="#services" style="font-size:14px;font-weight:500;color:#CFDBD5" style-hover="color:#F5CB5C">Services</a>
-      <a href="#compare" style="font-size:14px;font-weight:500;color:#CFDBD5" style-hover="color:#F5CB5C">Why Us</a>
-      <a href="#contact" style="font-size:14px;font-weight:600;color:#242423;background:#F5CB5C;padding:8px 16px;border-radius:999px" style-hover="background:#E8EDDF;color:#242423">Contact</a>
+      <a href="#about" style="font-size:14px;font-weight:500;color:#B8BDC2" style-hover="color:#F8D36E">About</a>
+      <a href="#services" style="font-size:14px;font-weight:500;color:#B8BDC2" style-hover="color:#F8D36E">Services</a>
+      <a href="#compare" style="font-size:14px;font-weight:500;color:#B8BDC2" style-hover="color:#F8D36E">Why Us</a>
+      <a href="#contact" style="font-size:14px;font-weight:600;color:#FFFFFF;background:#17819C;padding:8px 16px;border-radius:999px" style-hover="background:#DCDCDD;color:#2F3235">Contact</a>
     </div>
     </sc-if>
     <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
-      <button type="button" aria-label="Menu" aria-expanded="{{ menuExpanded }}" onClick="{{ toggleMenu }}" style="all:unset;cursor:pointer;width:44px;height:44px;border-radius:22px;border:1px solid #5b6b5f;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px" style-focus="outline:2px solid #F5CB5C;outline-offset:2px">
-        <span style="display:block;width:18px;height:2px;border-radius:1px;background:#E8EDDF"></span>
-        <span style="display:block;width:18px;height:2px;border-radius:1px;background:#E8EDDF"></span>
-        <span style="display:block;width:18px;height:2px;border-radius:1px;background:#E8EDDF"></span>
+      <button type="button" aria-label="Menu" aria-expanded="{{ menuExpanded }}" onClick="{{ toggleMenu }}" style="all:unset;cursor:pointer;width:44px;height:44px;border-radius:22px;border:1px solid #4C5C68;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px" style-focus="outline:2px solid #7CC4DA;outline-offset:2px">
+        <span style="display:block;width:18px;height:2px;border-radius:1px;background:#DCDCDD"></span>
+        <span style="display:block;width:18px;height:2px;border-radius:1px;background:#DCDCDD"></span>
+        <span style="display:block;width:18px;height:2px;border-radius:1px;background:#DCDCDD"></span>
       </button>
     </sc-if>
   </div>
   <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
-    <div style="border-top:1px solid #333533;padding:8px 24px 20px;display:flex;flex-direction:column">
-      <a href="#about" onClick="{{ closeMenu }}" style="display:flex;align-items:center;min-height:48px;font-size:17px;font-weight:500;color:#E8EDDF;border-bottom:1px solid #333533">About</a>
-      <a href="#services" onClick="{{ closeMenu }}" style="display:flex;align-items:center;min-height:48px;font-size:17px;font-weight:500;color:#E8EDDF;border-bottom:1px solid #333533">Services</a>
-      <a href="#compare" onClick="{{ closeMenu }}" style="display:flex;align-items:center;min-height:48px;font-size:17px;font-weight:500;color:#E8EDDF;border-bottom:1px solid #333533">Why Us</a>
-      <a href="#contact" onClick="{{ closeMenu }}" style="margin-top:16px;display:flex;align-items:center;justify-content:center;min-height:48px;font-size:16px;font-weight:700;color:#242423;background:#F5CB5C;border-radius:999px">Contact</a>
+    <div style="border-top:1px solid #46494C;padding:8px 24px 20px;display:flex;flex-direction:column">
+      <a href="#about" onClick="{{ closeMenu }}" style="display:flex;align-items:center;min-height:48px;font-size:17px;font-weight:500;color:#DCDCDD;border-bottom:1px solid #46494C">About</a>
+      <a href="#services" onClick="{{ closeMenu }}" style="display:flex;align-items:center;min-height:48px;font-size:17px;font-weight:500;color:#DCDCDD;border-bottom:1px solid #46494C">Services</a>
+      <a href="#compare" onClick="{{ closeMenu }}" style="display:flex;align-items:center;min-height:48px;font-size:17px;font-weight:500;color:#DCDCDD;border-bottom:1px solid #46494C">Why Us</a>
+      <a href="#contact" onClick="{{ closeMenu }}" style="margin-top:16px;display:flex;align-items:center;justify-content:center;min-height:48px;font-size:16px;font-weight:700;color:#FFFFFF;background:#17819C;border-radius:999px">Contact</a>
     </div>
   </sc-if>
 </nav>
@@ -84,22 +85,22 @@ a:hover{color:#E8EDDF}
 <section id="hero" data-screen-label="Hero" style="position:relative;overflow:hidden;min-height:calc(100vh - 64px);display:flex;align-items:center;padding:clamp(40px,8vw,96px) 24px">
   <div style="width:100%;max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:36px clamp(24px,4vw,56px)">
     <div style="flex:1 1 380px;min-width:0;display:flex;flex-direction:column">
-      <h1 style="margin:0;font-family:var(--cc-font-display);font-weight:400;text-transform:uppercase;font-size:clamp(38px,4.6vw,64px);line-height:1.05;letter-spacing:0.005em;color:#E8EDDF;text-wrap:balance">Your time belongs on <mark style="background:#F5CB5C;color:#242423;border-radius:8px;padding:0 0.14em;-webkit-box-decoration-break:clone;box-decoration-break:clone">growth</mark>, not administration.</h1>
-      <p style="margin:24px 0 0;max-width:30ch;font-size:clamp(17px,1.5vw,19px);line-height:1.6;color:#CFDBD5;text-wrap:pretty">AI and tech solutions that free your leadership for strategic work.</p>
+      <h1 style="margin:0;font-family:var(--cc-font-display);font-weight:400;text-transform:uppercase;font-size:clamp(38px,4.6vw,64px);line-height:1.05;letter-spacing:0.005em;color:#DCDCDD;text-wrap:balance">Your time belongs on <mark style="background:#17819C;color:#FFFFFF;border-radius:8px;padding:0 0.14em;-webkit-box-decoration-break:clone;box-decoration-break:clone">growth</mark>, not administration.</h1>
+      <p style="margin:24px 0 0;max-width:30ch;font-size:clamp(17px,1.5vw,19px);line-height:1.6;color:#B8BDC2;text-wrap:pretty">AI and tech solutions that free your leadership for strategic work.</p>
       <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:36px">
-        <a href="{{ deckUrl }}" download="Connected Commons - Solutions & Scenarios Deck.pdf" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;border:1.5px solid #CFDBD5;color:#E8EDDF;font-weight:700;font-size:15px;line-height:1;transition:border-color 0.2s, background-color 0.2s" style-hover="border-color:#E8EDDF;background:rgba(232,237,223,0.06);color:#E8EDDF" style-focus="outline:2px solid #F5CB5C;outline-offset:3px">
+        <a href="{{ deckUrl }}" download="Connected Commons - Solutions & Scenarios Deck.pdf" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;border:1.5px solid #B8BDC2;color:#DCDCDD;font-weight:700;font-size:15px;line-height:1;transition:border-color 0.2s, background-color 0.2s" style-hover="border-color:#DCDCDD;background:rgba(220,220,221,0.06);color:#DCDCDD" style-focus="outline:2px solid #7CC4DA;outline-offset:3px">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"></path></svg>
           Download strategy deck
         </a>
-        <a href="{{ waUrl }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;background:#F5CB5C;color:#242423;font-weight:700;font-size:15px;line-height:1;transition:background-color 0.2s" style-hover="background:#E8EDDF;color:#242423" style-focus="outline:2px solid #F5CB5C;outline-offset:3px">
+        <a href="{{ waUrl }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;background:#17819C;color:#FFFFFF;font-weight:700;font-size:15px;line-height:1;transition:background-color 0.2s" style-hover="background:#DCDCDD;color:#2F3235" style-focus="outline:2px solid #7CC4DA;outline-offset:3px">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 19.5l1.2-4A8 8 0 1 1 8.6 18.4z"></path></svg>
           Chat on WhatsApp
         </a>
       </div>
     </div>
     <sc-if value="{{ showAnimSlot }}" hint-placeholder-val="{{ true }}">
-      <div style="flex:1.12 1 440px;min-width:0;max-width:100%;aspect-ratio:10/9;position:relative;background:#242423">
-        <iframe src="hero-animation.html" title="Map of Southeast Asia with Singapore as the hub, connecting companies whose time-consuming tasks are resolved" loading="eager" style="position:absolute;inset:0;width:100%;height:100%;border:0;display:block;background:#242423"></iframe>
+      <div style="flex:1.12 1 440px;min-width:0;max-width:100%;aspect-ratio:10/9;position:relative;background:#2F3235">
+        <iframe src="hero-animation.html" title="Map of Southeast Asia with Singapore as the hub, connecting companies whose time-consuming tasks are resolved" loading="eager" style="position:absolute;inset:0;width:100%;height:100%;border:0;display:block;background:#2F3235"></iframe>
       </div>
     </sc-if>
   </div>
@@ -108,51 +109,51 @@ a:hover{color:#E8EDDF}
 <section id="the-problem" data-screen-label="The Problem" style="padding:clamp(64px,12vw,96px) 24px">
   <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:48px">
     <div style="display:flex;flex-direction:column;gap:12px">
-      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">The Problem</span>
-      <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#E8EDDF;text-transform:uppercase;text-wrap:balance">Everyone knows to adopt AI. Few know what to implement.</h2>
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#7CC4DA">The Problem</span>
+      <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#DCDCDD;text-transform:uppercase;text-wrap:balance">Everyone knows to adopt AI. Few know what to implement.</h2>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px">
       <sc-for list="{{ painPoints }}" as="pp" hint-placeholder-count="3">
-        <div style="border-top:1px solid #5b6b5f;padding-top:24px;display:flex;flex-direction:column;gap:12px">
-          <span style="font-family:var(--cc-font-display);font-size:32px;color:#F5CB5C">{{ pp.num }}</span>
-          <h3 style="margin:0;font-size:22px;font-weight:700;color:#E8EDDF">{{ pp.title }}</h3>
-          <p style="margin:0;font-size:16px;line-height:1.65;color:#CFDBD5;text-wrap:pretty">{{ pp.copy }}</p>
+        <div style="border-top:1px solid #4C5C68;padding-top:24px;display:flex;flex-direction:column;gap:12px">
+          <span style="font-family:var(--cc-font-display);font-size:32px;color:#7CC4DA">{{ pp.num }}</span>
+          <h3 style="margin:0;font-size:22px;font-weight:700;color:#DCDCDD">{{ pp.title }}</h3>
+          <p style="margin:0;font-size:16px;line-height:1.65;color:#B8BDC2;text-wrap:pretty">{{ pp.copy }}</p>
         </div>
       </sc-for>
     </div>
   </div>
 </section>
 
-<section id="what-we-solve" data-screen-label="What We Can Solve" style="padding:clamp(64px,12vw,96px) 24px;border-bottom:1px solid #333533">
+<section id="what-we-solve" data-screen-label="What We Can Solve" style="padding:clamp(64px,12vw,96px) 24px;border-bottom:1px solid #46494C">
   <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
     <div style="display:flex;flex-direction:column;gap:12px">
-      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">What We Can Solve</span>
-      <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#E8EDDF;text-transform:uppercase;text-wrap:balance">Reclaim hours of lost time and money with the right solutions</h2>
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#7CC4DA">What We Can Solve</span>
+      <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#DCDCDD;text-transform:uppercase;text-wrap:balance">Reclaim hours of lost time and money with the right solutions</h2>
     </div>
-    <div style="border:1px solid #F5CB5C;border-radius:16px;padding:20px 24px;display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline">
-      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">Root cause fact-find</span>
-      <p style="margin:0;flex:1 1 320px;font-size:16px;line-height:1.6;color:#E8EDDF;text-wrap:pretty">In depth discovery sessions with your team to isolate and fact find root causes to symptoms, and provide recommendations tailored to your staff needs.</p>
+    <div style="border:1px solid #7CC4DA;border-radius:16px;padding:20px 24px;display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline">
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#7CC4DA">Root cause fact-find</span>
+      <p style="margin:0;flex:1 1 320px;font-size:16px;line-height:1.6;color:#DCDCDD;text-wrap:pretty">In depth discovery sessions with your team to isolate and fact find root causes to symptoms, and provide recommendations tailored to your staff needs.</p>
     </div>
     <div style="display:flex;flex-direction:column;gap:24px" onMouseEnter="{{ solvePause }}" onMouseLeave="{{ solveResume }}" onTouchStart="{{ solvePause }}">
     <div ref="{{ solveTrack }}" onScroll="{{ solveOnScroll }}" style="display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-webkit-overflow-scrolling:touch">
       <sc-for list="{{ solveAreas }}" as="a" hint-placeholder-count="6">
-        <div data-solve-card="1" style="flex:0 0 max(280px, calc((100% - 40px) / 3));max-width:100%;box-sizing:border-box;scroll-snap-align:start;background:#333533;border-radius:20px;padding:28px 28px 32px;display:flex;flex-direction:column;gap:20px">
+        <div data-solve-card="1" style="flex:0 0 max(280px, calc((100% - 40px) / 3));max-width:100%;box-sizing:border-box;scroll-snap-align:start;background:#46494C;border-radius:20px;padding:28px 28px 32px;display:flex;flex-direction:column;gap:20px">
           <div style="display:flex;flex-direction:column;align-items:flex-start;gap:16px">
-            <span style="width:48px;height:48px;border-radius:14px;background:#242423;display:flex;align-items:center;justify-content:center"><img src="{{ a.icon }}" alt="" width="24" height="24" style="display:block"></span>
-            <h3 style="margin:0;font-size:20px;font-weight:700;color:#E8EDDF">{{ a.fn }}</h3>
+            <span style="width:48px;height:48px;border-radius:14px;background:#2F3235;display:flex;align-items:center;justify-content:center"><img src="{{ a.icon }}" alt="" width="24" height="24" style="display:block"></span>
+            <h3 style="margin:0;font-size:20px;font-weight:700;color:#DCDCDD">{{ a.fn }}</h3>
           </div>
           <div style="display:flex;flex-direction:column">
-            <div style="display:flex;flex-wrap:wrap;gap:4px 16px;padding:12px 0;border-top:1px solid #5b6b5f">
-              <span style="flex:0 0 88px;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#CFDBD5;padding-top:3px">Symptom</span>
-              <span style="flex:1 1 200px;min-width:0;font-size:15px;line-height:1.55;color:#CFDBD5;text-wrap:pretty">{{ a.symptom }}</span>
+            <div style="display:flex;flex-wrap:wrap;gap:4px 16px;padding:12px 0;border-top:1px solid #4C5C68">
+              <span style="flex:0 0 88px;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#B8BDC2;padding-top:3px">Symptom</span>
+              <span style="flex:1 1 200px;min-width:0;font-size:15px;line-height:1.55;color:#B8BDC2;text-wrap:pretty">{{ a.symptom }}</span>
             </div>
-            <div style="display:flex;flex-wrap:wrap;gap:4px 16px;padding:12px 0;border-top:1px solid #5b6b5f">
-              <span style="flex:0 0 88px;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C;padding-top:3px">Solution</span>
-              <span style="flex:1 1 200px;min-width:0;font-size:15px;line-height:1.55;color:#E8EDDF;text-wrap:pretty">{{ a.solution }}</span>
+            <div style="display:flex;flex-wrap:wrap;gap:4px 16px;padding:12px 0;border-top:1px solid #4C5C68">
+              <span style="flex:0 0 88px;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#7CC4DA;padding-top:3px">Solution</span>
+              <span style="flex:1 1 200px;min-width:0;font-size:15px;line-height:1.55;color:#DCDCDD;text-wrap:pretty">{{ a.solution }}</span>
             </div>
-            <div style="display:flex;flex-wrap:wrap;gap:4px 16px;padding:12px 0;border-top:1px solid #5b6b5f">
-              <span style="flex:0 0 88px;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#CFDBD5;padding-top:3px">Outcome</span>
-              <span style="flex:1 1 200px;min-width:0;font-size:15px;font-weight:700;line-height:1.55;color:#E8EDDF;text-wrap:pretty">{{ a.outcome }}</span>
+            <div style="display:flex;flex-wrap:wrap;gap:4px 16px;padding:12px 0;border-top:1px solid #4C5C68">
+              <span style="flex:0 0 88px;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#B8BDC2;padding-top:3px">Outcome</span>
+              <span style="flex:1 1 200px;min-width:0;font-size:15px;font-weight:700;line-height:1.55;color:#DCDCDD;text-wrap:pretty">{{ a.outcome }}</span>
             </div>
           </div>
         </div>
@@ -165,70 +166,70 @@ a:hover{color:#E8EDDF}
         </sc-for>
       </div>
       <div style="display:flex;gap:8px">
-        <button aria-label="Previous" onClick="{{ solvePrev }}" style="all:unset;cursor:pointer;width:44px;height:44px;border-radius:22px;border:1px solid #5b6b5f;display:flex;align-items:center;justify-content:center;color:#E8EDDF;font-size:18px" style-hover="border-color:#F5CB5C;color:#F5CB5C">←</button>
-        <button aria-label="Next" onClick="{{ solveNext }}" style="all:unset;cursor:pointer;width:44px;height:44px;border-radius:22px;border:1px solid #5b6b5f;display:flex;align-items:center;justify-content:center;color:#E8EDDF;font-size:18px" style-hover="border-color:#F5CB5C;color:#F5CB5C">→</button>
+        <button aria-label="Previous" onClick="{{ solvePrev }}" style="all:unset;cursor:pointer;width:44px;height:44px;border-radius:22px;border:1px solid #4C5C68;display:flex;align-items:center;justify-content:center;color:#DCDCDD;font-size:18px" style-hover="border-color:#7CC4DA;color:#7CC4DA">←</button>
+        <button aria-label="Next" onClick="{{ solveNext }}" style="all:unset;cursor:pointer;width:44px;height:44px;border-radius:22px;border:1px solid #4C5C68;display:flex;align-items:center;justify-content:center;color:#DCDCDD;font-size:18px" style-hover="border-color:#7CC4DA;color:#7CC4DA">→</button>
       </div>
     </div>
     </div>
   </div>
 </section>
 
-<section id="about" data-screen-label="About" style="background:#333533;padding:clamp(64px,12vw,96px) 24px">
+<section id="about" data-screen-label="About" style="background:#46494C;padding:clamp(64px,12vw,96px) 24px">
   <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:32px 48px">
     <div style="flex:1 1 260px;display:flex;flex-direction:column;gap:12px">
-      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">About</span>
-      <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#E8EDDF;text-transform:uppercase">Who We Are</h2>
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#7CC4DA">About</span>
+      <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#DCDCDD;text-transform:uppercase">Who We Are</h2>
     </div>
     <div style="display:flex;flex-direction:column;gap:20px;flex:2 1 520px;min-width:0">
-      <p style="margin:0;font-size:18px;line-height:1.7;color:#E8EDDF;text-wrap:pretty"><b>Connected Commons</b> is a Singapore-based business solutions consultancy. We work with foreign SMEs and funded startups to diagnose challenges, develop tailored solutions, and manage operational growth across Southeast Asia.</p>
-      <p style="margin:0;font-size:18px;line-height:1.7;color:#CFDBD5;text-wrap:pretty">Led by an experienced founder and supported by a network of specialist partners, we deliver integrated operations and corporate tooling—tested before implementation. Instead of adding subscription complexity, we provide what works, at a fraction of the cost.</p>
-      <a href="before-we-work-together.html" style="align-self:flex-start;font-size:16px;font-weight:600;line-height:1.5" style-hover="color:#E8EDDF">A note from Ron, before we work together →</a>
-      <div style="border-top:1px solid #5b6b5f;padding-top:20px;margin-top:8px;display:flex;flex-direction:column;gap:8px">
-        <span style="font-size:13px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#CFDBD5">Company Credibility</span>
-        <p style="margin:0;font-size:16px;line-height:1.7;color:#CFDBD5;text-wrap:pretty">Our expertise spans 20+ years across <b>banking, payments, real estate</b>, <b>logistics, and tech/talent outsourcing</b> with a Singapore head office and SEA delivery. Bilingual in English and Chinese. Compliance-grade local AI solutions crafted and available for clients.</p>
+      <p style="margin:0;font-size:18px;line-height:1.7;color:#DCDCDD;text-wrap:pretty"><b>Connected Commons</b> is a Singapore-based business solutions consultancy. We work with foreign SMEs and funded startups to diagnose challenges, develop tailored solutions, and manage operational growth across Southeast Asia.</p>
+      <p style="margin:0;font-size:18px;line-height:1.7;color:#B8BDC2;text-wrap:pretty">Led by an experienced founder and supported by a network of specialist partners, we deliver integrated operations and corporate tooling—tested before implementation. Instead of adding subscription complexity, we provide what works, at a fraction of the cost.</p>
+      <a href="before-we-work-together.html" style="align-self:flex-start;font-size:16px;font-weight:600;line-height:1.5" style-hover="color:#DCDCDD">A note from Ron, before we work together →</a>
+      <div style="border-top:1px solid #4C5C68;padding-top:20px;margin-top:8px;display:flex;flex-direction:column;gap:8px">
+        <span style="font-size:13px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#B8BDC2">Company Credibility</span>
+        <p style="margin:0;font-size:16px;line-height:1.7;color:#B8BDC2;text-wrap:pretty">Our expertise spans 20+ years across <b>banking, payments, real estate</b>, <b>logistics, and tech/talent outsourcing</b> with a Singapore head office and SEA delivery. Bilingual in English and Chinese. Compliance-grade local AI solutions crafted and available for clients.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="root-cause" data-screen-label="Root Cause" style="background:#F8F7F3;padding:clamp(64px,12vw,96px) 24px">
+<section id="root-cause" data-screen-label="Root Cause" style="background:#F4F4F5;padding:clamp(64px,12vw,96px) 24px">
   <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
     <div style="display:flex;flex-direction:column;gap:12px">
-      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#5b6b5f">How We Work</span>
-      <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#242423;text-transform:uppercase;text-wrap:balance">Root Cause Isolation. Then the Fix that Fits.</h2>
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#0B5B72">How We Work</span>
+      <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#2F3235;text-transform:uppercase;text-wrap:balance">Root Cause Isolation. Then the Fix that Fits.</h2>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:48px;align-items:center">
       <picture>
   <source media="(max-width: 768px)" srcset="images/pyramid-dark-still.svg">
   <img src="images/pyramid-dark.svg" alt="Pyramid with People at the top, Process in the middle and AI at the base, casting a shadow labelled The Problem" style="display:block;width:100%;height:auto">
 </picture>
-      <div style="display:flex;flex-direction:column;border-bottom:1px solid #d9d8d1">
-        <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:16px;padding:18px 0;border-top:1px solid #d9d8d1">
-          <span style="width:14px;height:14px;margin-top:2px;border-radius:3px;background:#F5CB5C;"></span>
+      <div style="display:flex;flex-direction:column;border-bottom:1px solid #B8BDC2">
+        <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:16px;padding:18px 0;border-top:1px solid #B8BDC2">
+          <span style="width:14px;height:14px;margin-top:2px;border-radius:3px;background:#1985A1;"></span>
           <div style="display:flex;flex-direction:column;gap:6px">
-            <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#242423">People · The Top</span>
-            <p style="margin:0;font-size:15px;line-height:1.6;color:#333533;text-wrap:pretty">Judgement: escalations, relationships and decisions, placed from our regional network.</p>
+            <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#2F3235">People · The Top</span>
+            <p style="margin:0;font-size:15px;line-height:1.6;color:#4C5C68;text-wrap:pretty">Judgement: escalations, relationships and decisions, placed from our regional network.</p>
           </div>
         </div>
-        <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:16px;padding:18px 0;border-top:1px solid #d9d8d1">
-          <span style="width:14px;height:14px;margin-top:2px;border-radius:3px;background:#5E7360;"></span>
+        <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:16px;padding:18px 0;border-top:1px solid #B8BDC2">
+          <span style="width:14px;height:14px;margin-top:2px;border-radius:3px;background:#4C5C68;"></span>
           <div style="display:flex;flex-direction:column;gap:6px">
-            <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#242423">Process · The Middle</span>
-            <p style="margin:0;font-size:15px;line-height:1.6;color:#333533;text-wrap:pretty">SOPs, playbooks and clear ownership, mapped correctly with you, so AI and people work from the same playbook.</p>
+            <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#2F3235">Process · The Middle</span>
+            <p style="margin:0;font-size:15px;line-height:1.6;color:#4C5C68;text-wrap:pretty">SOPs, playbooks and clear ownership, mapped correctly with you, so AI and people work from the same playbook.</p>
           </div>
         </div>
-        <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:16px;padding:18px 0;border-top:1px solid #d9d8d1">
-          <span style="width:14px;height:14px;margin-top:2px;border-radius:3px;background:#242423;"></span>
+        <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:16px;padding:18px 0;border-top:1px solid #B8BDC2">
+          <span style="width:14px;height:14px;margin-top:2px;border-radius:3px;background:#2F3235;"></span>
           <div style="display:flex;flex-direction:column;gap:6px">
-            <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#242423">AI · The Foundation</span>
-            <p style="margin:0;font-size:15px;line-height:1.6;color:#333533;text-wrap:pretty">Carries the repetitive volume: enquiries, documents, first drafts and routine reporting.</p>
+            <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#2F3235">AI · The Foundation</span>
+            <p style="margin:0;font-size:15px;line-height:1.6;color:#4C5C68;text-wrap:pretty">Carries the repetitive volume: enquiries, documents, first drafts and routine reporting.</p>
           </div>
         </div>
-        <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:16px;padding:18px 0;border-top:1px solid #d9d8d1">
-          <span style="width:14px;height:14px;margin-top:2px;border-radius:3px;background:linear-gradient(135deg,#9a9a96,#e6e5e0);"></span>
+        <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:16px;padding:18px 0;border-top:1px solid #B8BDC2">
+          <span style="width:14px;height:14px;margin-top:2px;border-radius:3px;background:linear-gradient(135deg,#B8BDC2,#DCDCDD);"></span>
           <div style="display:flex;flex-direction:column;gap:6px">
-            <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#242423">The Shadow · Your Problem</span>
-            <p style="margin:0;font-size:15px;line-height:1.6;color:#333533;text-wrap:pretty">Your problems are symptoms of a root cause. We find it and fix them for you.</p>
+            <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#2F3235">The Shadow · Your Problem</span>
+            <p style="margin:0;font-size:15px;line-height:1.6;color:#4C5C68;text-wrap:pretty">Your problems are symptoms of a root cause. We find it and fix them for you.</p>
           </div>
         </div>
       </div>
@@ -236,26 +237,26 @@ a:hover{color:#E8EDDF}
   </div>
 </section>
 
-<section id="problems" data-screen-label="Problems" style="padding:clamp(64px,12vw,96px) 24px;border-top:1px solid #333533">
+<section id="problems" data-screen-label="Problems" style="padding:clamp(64px,12vw,96px) 24px;border-top:1px solid #46494C">
   <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:48px">
     <div style="display:flex;flex-direction:column;gap:12px">
-      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">Scenarios</span>
-      <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#E8EDDF;text-transform:uppercase">Problems We Solve</h2>
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#7CC4DA">Scenarios</span>
+      <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#DCDCDD;text-transform:uppercase">Problems We Solve</h2>
     </div>
     <div style="display:flex;flex-direction:column;gap:24px">
       <div class="cc-tabs-wrap" style="position:relative">
       <div role="tablist" style="display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -24px;padding:0 24px">
         <sc-for list="{{ problems }}" as="p" hint-placeholder-count="3">
           <sc-if value="{{ p.active }}" hint-placeholder-val="{{ false }}">
-            <button role="tab" aria-selected="true" onClick="{{ p.select }}" style="all:unset;box-sizing:border-box;cursor:pointer;flex:1 0 220px;scroll-snap-align:start;scroll-margin-left:24px;display:flex;flex-direction:column;gap:6px;padding:20px 24px;border-radius:16px;background:#333533;border:1px solid #F5CB5C">
-              <span style="font-family:var(--cc-font-display);font-size:24px;color:#F5CB5C">{{ p.num }}</span>
-              <span style="font-size:18px;font-weight:700;color:#E8EDDF">{{ p.title }}</span>
+            <button role="tab" aria-selected="true" onClick="{{ p.select }}" style="all:unset;box-sizing:border-box;cursor:pointer;flex:1 0 220px;scroll-snap-align:start;scroll-margin-left:24px;display:flex;flex-direction:column;gap:6px;padding:20px 24px;border-radius:16px;background:#46494C;border:1px solid #7CC4DA">
+              <span style="font-family:var(--cc-font-display);font-size:24px;color:#7CC4DA">{{ p.num }}</span>
+              <span style="font-size:18px;font-weight:700;color:#DCDCDD">{{ p.title }}</span>
             </button>
           </sc-if>
           <sc-if value="{{ p.inactive }}" hint-placeholder-val="{{ true }}">
-            <button role="tab" aria-selected="false" onClick="{{ p.select }}" style="all:unset;box-sizing:border-box;cursor:pointer;flex:1 0 220px;scroll-snap-align:start;scroll-margin-left:24px;display:flex;flex-direction:column;gap:6px;padding:20px 24px;border-radius:16px;background:transparent;border:1px solid #333533;transition:border-color 0.2s ease, background 0.2s ease" style-hover="border-color:#5b6b5f;background:#2c2d2b">
-              <span style="font-family:var(--cc-font-display);font-size:24px;color:#CFDBD5">{{ p.num }}</span>
-              <span style="font-size:18px;font-weight:700;color:#CFDBD5">{{ p.title }}</span>
+            <button role="tab" aria-selected="false" onClick="{{ p.select }}" style="all:unset;box-sizing:border-box;cursor:pointer;flex:1 0 220px;scroll-snap-align:start;scroll-margin-left:24px;display:flex;flex-direction:column;gap:6px;padding:20px 24px;border-radius:16px;background:transparent;border:1px solid #46494C;transition:border-color 0.2s ease, background 0.2s ease" style-hover="border-color:#4C5C68;background:rgba(70,73,76,0.5)">
+              <span style="font-family:var(--cc-font-display);font-size:24px;color:#B8BDC2">{{ p.num }}</span>
+              <span style="font-size:18px;font-weight:700;color:#B8BDC2">{{ p.title }}</span>
             </button>
           </sc-if>
         </sc-for>
@@ -265,29 +266,29 @@ a:hover{color:#E8EDDF}
       <div role="tabpanel" style="min-width:0">
         <sc-for list="{{ problems }}" as="p" hint-placeholder-count="1">
           <sc-if value="{{ p.active }}" hint-placeholder-val="{{ false }}">
-            <div style="background:#333533;border-radius:20px;overflow:hidden;display:flex;flex-wrap:wrap;align-items:flex-start">
-              <div style="flex:1 1 360px;min-width:0;max-width:100%;aspect-ratio:1/1;overflow:hidden;background:#242423">
+            <div style="background:#46494C;border-radius:20px;overflow:hidden;display:flex;flex-wrap:wrap;align-items:flex-start">
+              <div style="flex:1 1 360px;min-width:0;max-width:100%;aspect-ratio:1/1;overflow:hidden;background:#2F3235">
                 <img src="images/{{ p.slotId }}.webp" alt="" loading="lazy" style="display:block;width:100%;height:100%;object-fit:cover">
               </div>
               <div style="flex:1 1 360px;min-width:0;padding:clamp(24px,6vw,40px);display:flex;flex-direction:column;gap:28px">
                 <div style="display:flex;flex-direction:column;gap:12px">
-                  <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">The problem</span>
-                  <p style="margin:0;font-size:22px;line-height:1.45;color:#E8EDDF;text-wrap:pretty">{{ p.pain }}</p>
+                  <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#7CC4DA">The problem</span>
+                  <p style="margin:0;font-size:22px;line-height:1.45;color:#DCDCDD;text-wrap:pretty">{{ p.pain }}</p>
                 </div>
                 <div style="display:flex;flex-direction:column;gap:12px">
-                  <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">How we fix it</span>
+                  <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#7CC4DA">How we fix it</span>
                   <div style="display:flex;flex-direction:column">
                     <sc-for list="{{ p.fix }}" as="f" hint-placeholder-count="3">
-                      <div style="display:flex;flex-wrap:wrap;gap:6px 16px;padding:14px 0;border-top:1px solid #5b6b5f">
-                        <span style="flex:0 0 96px;font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#CFDBD5;padding-top:3px">{{ f.label }}</span>
-                        <span style="flex:1 1 200px;min-width:0;font-size:16px;line-height:1.6;color:#CFDBD5;text-wrap:pretty">{{ f.text }}</span>
+                      <div style="display:flex;flex-wrap:wrap;gap:6px 16px;padding:14px 0;border-top:1px solid #4C5C68">
+                        <span style="flex:0 0 96px;font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#B8BDC2;padding-top:3px">{{ f.label }}</span>
+                        <span style="flex:1 1 200px;min-width:0;font-size:16px;line-height:1.6;color:#B8BDC2;text-wrap:pretty">{{ f.text }}</span>
                       </div>
                     </sc-for>
                   </div>
                 </div>
-                <div style="display:flex;flex-direction:column;gap:8px;padding-top:20px;border-top:1px solid #5b6b5f">
-                  <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">The outcome</span>
-                  <p style="margin:0;font-size:18px;font-weight:700;line-height:1.5;color:#E8EDDF;text-wrap:pretty">{{ p.outcome }}</p>
+                <div style="display:flex;flex-direction:column;gap:8px;padding-top:20px;border-top:1px solid #4C5C68">
+                  <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#7CC4DA">The outcome</span>
+                  <p style="margin:0;font-size:18px;font-weight:700;line-height:1.5;color:#DCDCDD;text-wrap:pretty">{{ p.outcome }}</p>
                 </div>
               </div>
             </div>
@@ -301,19 +302,19 @@ a:hover{color:#E8EDDF}
 <section id="services" data-screen-label="Services" style="padding:clamp(64px,12vw,96px) 24px">
   <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:48px">
     <div style="display:flex;flex-direction:column;gap:12px">
-      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">Services</span>
-      <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#E8EDDF;text-transform:uppercase">Our Approach</h2>
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#7CC4DA">Services</span>
+      <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#DCDCDD;text-transform:uppercase">Our Approach</h2>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px">
       <sc-for list="{{ services }}" as="s" hint-placeholder-count="3">
-        <div style="background:#333533;border:1px solid #333533;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;position:relative" style-hover="border-color:#F5CB5C;transform:scale(1.04);box-shadow:0 24px 48px rgba(0,0,0,0.45);z-index:2">
-          <div style="width:100%;aspect-ratio:1/1;overflow:hidden;background:#242423">
+        <div style="background:#46494C;border:1px solid #46494C;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;position:relative" style-hover="border-color:#7CC4DA;transform:scale(1.04);box-shadow:0 24px 48px rgba(0,0,0,0.45);z-index:2">
+          <div style="width:100%;aspect-ratio:1/1;overflow:hidden;background:#2F3235">
             <img src="images/{{ s.slotId }}.webp" alt="" loading="lazy" style="display:block;width:100%;height:100%;object-fit:cover">
           </div>
           <div style="padding:28px 32px 32px;display:flex;flex-direction:column;gap:16px">
-            <span style="font-family:var(--cc-font-display);font-size:32px;color:#F5CB5C">{{ s.num }}</span>
-            <h3 style="margin:0;font-size:22px;font-weight:700;color:#E8EDDF">{{ s.title }}</h3>
-            <p style="margin:0;font-size:16px;line-height:1.65;color:#CFDBD5;text-wrap:pretty">{{ s.copy }}</p>
+            <span style="font-family:var(--cc-font-display);font-size:32px;color:#7CC4DA">{{ s.num }}</span>
+            <h3 style="margin:0;font-size:22px;font-weight:700;color:#DCDCDD">{{ s.title }}</h3>
+            <p style="margin:0;font-size:16px;line-height:1.65;color:#B8BDC2;text-wrap:pretty">{{ s.copy }}</p>
           </div>
         </div>
       </sc-for>
@@ -321,81 +322,81 @@ a:hover{color:#E8EDDF}
   </div>
 </section>
 
-<section id="compare" data-screen-label="Comparison" style="background:#333533;padding:clamp(64px,12vw,96px) 24px">
+<section id="compare" data-screen-label="Comparison" style="background:#46494C;padding:clamp(64px,12vw,96px) 24px">
   <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
     <div style="display:flex;flex-direction:column;gap:12px">
-      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#F5CB5C">Why Choose Us</span>
-      <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#E8EDDF;text-transform:uppercase">The Connected Commons Advantage</h2>
+      <span style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#7CC4DA">Why Choose Us</span>
+      <h2 style="margin:0;font-family:var(--cc-font-display);font-weight:400;font-size:clamp(32px,4vw,48px);line-height:1.1;color:#DCDCDD;text-transform:uppercase">The Connected Commons Advantage</h2>
     </div>
-    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid #5b6b5f;border-radius:20px">
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid #4C5C68;border-radius:20px">
       <table style="width:100%;min-width:820px;border-collapse:collapse;font-size:15px;line-height:1.55">
         <thead>
           <tr>
-            <th style="text-align:left;padding:20px;position:sticky;left:0;background:#333533;color:#CFDBD5;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;width:150px">Feature</th>
-            <th style="text-align:left;padding:20px;color:#CFDBD5;font-weight:700;font-size:16px">Traditional SaaS + Outsourcing</th>
-            <th style="text-align:left;padding:20px;color:#CFDBD5;font-weight:700;font-size:16px">Hiring Permanent Staff</th>
-            <th style="text-align:left;padding:20px;background:#F5CB5C;color:#242423;font-weight:800;font-size:16px">Connected Commons Model</th>
+            <th style="text-align:left;padding:20px;position:sticky;left:0;background:#46494C;color:#B8BDC2;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;width:150px">Feature</th>
+            <th style="text-align:left;padding:20px;color:#B8BDC2;font-weight:700;font-size:16px">Traditional SaaS + Outsourcing</th>
+            <th style="text-align:left;padding:20px;color:#B8BDC2;font-weight:700;font-size:16px">Hiring Permanent Staff</th>
+            <th style="text-align:left;padding:20px;background:#17819C;color:#FFFFFF;font-weight:800;font-size:16px">Connected Commons Model</th>
           </tr>
         </thead>
         <tbody>
           <sc-for list="{{ rows }}" as="r" hint-placeholder-count="5">
-            <tr style="border-top:1px solid #5b6b5f">
-              <th style="text-align:left;vertical-align:top;padding:20px;position:sticky;left:0;background:#333533;color:#E8EDDF;font-weight:700">{{ r.f }}</th>
-              <td style="vertical-align:top;padding:20px;color:#CFDBD5">{{ r.saas }}</td>
-              <td style="vertical-align:top;padding:20px;color:#CFDBD5">{{ r.staff }}</td>
-              <td style="vertical-align:top;padding:20px;background:#242423;color:#E8EDDF;font-weight:500;border-left:2px solid #F5CB5C">{{ r.cc }}</td>
+            <tr style="border-top:1px solid #4C5C68">
+              <th style="text-align:left;vertical-align:top;padding:20px;position:sticky;left:0;background:#46494C;color:#DCDCDD;font-weight:700">{{ r.f }}</th>
+              <td style="vertical-align:top;padding:20px;color:#B8BDC2">{{ r.saas }}</td>
+              <td style="vertical-align:top;padding:20px;color:#B8BDC2">{{ r.staff }}</td>
+              <td style="vertical-align:top;padding:20px;background:#2F3235;color:#DCDCDD;font-weight:500;border-left:2px solid #17819C">{{ r.cc }}</td>
             </tr>
           </sc-for>
         </tbody>
       </table>
     </div>
-    <span style="font-size:13px;color:#CFDBD5">Scroll horizontally on small screens →</span>
+    <span style="font-size:13px;color:#B8BDC2">Scroll horizontally on small screens →</span>
   </div>
 </section>
 
 <dc-import name="Discovery Offer" hint-size="100%,820px"></dc-import>
 
-<footer id="contact" data-screen-label="Footer" style="background:#1c1c1b;border-top:1px solid #333533;padding:72px 24px 40px">
+<footer id="contact" data-screen-label="Footer" style="background:#46494C;border-top:1px solid #4C5C68;padding:72px 24px 40px">
   <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:48px">
     <div style="display:grid;grid-template-columns:{{ footerCols }};gap:40px 32px">
       <div style="min-width:0;display:flex;flex-direction:column;gap:16px;max-width:420px">
-        <a href="#hero" aria-label="Connected Commons home" style="display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;letter-spacing:-0.01em;color:#E8EDDF" style-hover="color:#E8EDDF"><img src="images/logo-mark-white.png" alt="" style="width:36px;height:36px;display:block"><span style="display:flex">connected<span style="color:#F5CB5C">commons</span></span></a>
-        <p style="margin:0;font-size:16px;line-height:1.6;color:#E8EDDF">AI business solutions for Southeast Asia</p>
-        <p style="margin:0;font-size:14px;line-height:1.7;color:#CFDBD5;text-wrap:pretty">Registration &amp; UEN pending · SSIC 70201 – Management Consultancy</p>
-        <p style="margin:0;font-size:14px;color:#CFDBD5">© 2026 Connected Commons. All rights reserved.</p>
+        <a href="#hero" aria-label="Connected Commons home" style="display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;letter-spacing:-0.01em;color:#DCDCDD" style-hover="color:#DCDCDD"><img src="images/logo-mark-white.png" alt="" style="width:36px;height:36px;display:block"><span style="display:flex">connected<span style="color:#F8D36E">commons</span></span></a>
+        <p style="margin:0;font-size:16px;line-height:1.6;color:#DCDCDD">AI business solutions for Southeast Asia</p>
+        <p style="margin:0;font-size:14px;line-height:1.7;color:#B8BDC2;text-wrap:pretty">Registration &amp; UEN pending · SSIC 70201 – Management Consultancy</p>
+        <p style="margin:0;font-size:14px;color:#B8BDC2">© 2026 Connected Commons. All rights reserved.</p>
       </div>
     <nav aria-label="Company" style="min-width:0;display:flex;flex-direction:column;gap:18px">
-      <h2 style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#CFDBD5;margin:0">Company</h2>
+      <h2 style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#B8BDC2;margin:0">Company</h2>
       <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px">
-        <li><a href="#about" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">About</a></li>
-        <li><a href="#root-cause" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">How we work</a></li>
-        <li><a href="#what-we-solve" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Solutions</a></li>
-        <li><a href="/faq.html" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">FAQ</a></li>
-        <li><a href="before-we-work-together.html" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Before We Work Together</a></li>
+        <li><a href="#about" style="font-size:15px;line-height:1.4;color:#DCDCDD" style-hover="color:#F8D36E">About</a></li>
+        <li><a href="#root-cause" style="font-size:15px;line-height:1.4;color:#DCDCDD" style-hover="color:#F8D36E">How we work</a></li>
+        <li><a href="#what-we-solve" style="font-size:15px;line-height:1.4;color:#DCDCDD" style-hover="color:#F8D36E">Solutions</a></li>
+        <li><a href="/faq.html" style="font-size:15px;line-height:1.4;color:#DCDCDD" style-hover="color:#F8D36E">FAQ</a></li>
+        <li><a href="before-we-work-together.html" style="font-size:15px;line-height:1.4;color:#DCDCDD" style-hover="color:#F8D36E">Before We Work Together</a></li>
       </ul>
     </nav>
     <nav aria-label="Legal" style="min-width:0;display:flex;flex-direction:column;gap:18px">
-      <h2 style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#CFDBD5;margin:0">Legal</h2>
+      <h2 style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#B8BDC2;margin:0">Legal</h2>
       <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px">
-        <li><a href="privacy-policy.html" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Privacy Policy</a></li>
-        <li><a href="terms-of-use.html" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Terms of Use</a></li>
-        <li><a href="cookie-policy.html" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Cookie Policy</a></li>
+        <li><a href="privacy-policy.html" style="font-size:15px;line-height:1.4;color:#DCDCDD" style-hover="color:#F8D36E">Privacy Policy</a></li>
+        <li><a href="terms-of-use.html" style="font-size:15px;line-height:1.4;color:#DCDCDD" style-hover="color:#F8D36E">Terms of Use</a></li>
+        <li><a href="cookie-policy.html" style="font-size:15px;line-height:1.4;color:#DCDCDD" style-hover="color:#F8D36E">Cookie Policy</a></li>
       </ul>
     </nav>
     <nav aria-label="Contact" style="min-width:0;display:flex;flex-direction:column;gap:18px">
-      <h2 style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#CFDBD5;margin:0">Contact</h2>
+      <h2 style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#B8BDC2;margin:0">Contact</h2>
       <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px">
-        <li><a href="mailto:hello@connectedcommons.co" style="font-size:14px;line-height:1.4;color:#E8EDDF;overflow-wrap:anywhere" style-hover="color:#F5CB5C">hello@connectedcommons.co</a></li>
-        <li><a href="{{ waUrl }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 01-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1121 11.5z"></path></svg>WhatsApp</a></li>
-        <li><a href="https://calendar.app.google/2oHBsRx1rrcdJVNP6" target="_blank" rel="noopener" style="font-size:15px;line-height:1.4;color:#E8EDDF" style-hover="color:#F5CB5C">Book a call</a></li>
+        <li><a href="mailto:hello@connectedcommons.co" style="font-size:14px;line-height:1.4;color:#DCDCDD;overflow-wrap:anywhere" style-hover="color:#F8D36E">hello@connectedcommons.co</a></li>
+        <li><a href="{{ waUrl }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;font-size:15px;line-height:1.4;color:#DCDCDD" style-hover="color:#F8D36E"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 01-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1121 11.5z"></path></svg>WhatsApp</a></li>
+        <li><a href="https://calendar.app.google/2oHBsRx1rrcdJVNP6" target="_blank" rel="noopener" style="font-size:15px;line-height:1.4;color:#DCDCDD" style-hover="color:#F8D36E">Book a call</a></li>
       </ul>
     </nav>
     </div>
-    <p style="margin:0;padding-top:24px;border-top:1px solid #333533;font-size:13px;line-height:1.7;color:#A8A8A2;text-wrap:pretty;max-width:90ch">Connected Commons provides business consulting. We do not provide legal, tax, accounting or financial advice. Corporate services are delivered through licensed partners.</p>
+    <p style="margin:0;padding-top:24px;border-top:1px solid #46494C;font-size:13px;line-height:1.7;color:#B8BDC2;text-wrap:pretty;max-width:90ch">Connected Commons provides business consulting. We do not provide legal, tax, accounting or financial advice. Corporate services are delivered through licensed partners.</p>
   </div>
 </footer>
 
-<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#242423"></rect><circle cx="42" cy="50" r="16" fill="none" stroke="#F5CB5C" stroke-width="5"></circle><circle cx="58" cy="50" r="16" fill="none" stroke="#E8EDDF" stroke-width="5"></circle></svg></template></x-dc>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#2F3235"></rect><circle cx="42" cy="50" r="16" fill="none" stroke="#F8D36E" stroke-width="5"></circle><circle cx="58" cy="50" r="16" fill="none" stroke="#FFFFFF" stroke-width="5"></circle></svg></template></x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;showAnimSlot&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;whatsappNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;6580349668&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;deckUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;files/connected-commons-solutions-scenarios-deck.pdf&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
 class Component extends DCLogic {
   solveTrackRef = React.createRef();
@@ -451,11 +452,11 @@ class Component extends DCLogic {
           h("img", { src: "images/sea-map-clean.jpg", alt: "", style: { position: "absolute", inset: 0, width: "100%", height: "100%", display: "block" } }),
           h("svg", { viewBox: "0 0 1024 572", style: { position: "absolute", inset: 0, width: "100%", height: "100%", overflow: "visible" } },
             groups,
-            h("circle", { cx: sx, cy: sy, r: 3, fill: "none", stroke: "#F5CB5C", strokeWidth: 0.7, style: { animation: `ccRing ${cfg.interval}s ease-out ${cfg.intro}s infinite` } }),
+            h("circle", { cx: sx, cy: sy, r: 3, fill: "none", stroke: "#F8D36E", strokeWidth: 0.7, style: { animation: `ccRing ${cfg.interval}s ease-out ${cfg.intro}s infinite` } }),
             h("g", { style: { animation: `ccPinDrop 0.9s cubic-bezier(.3,1.4,.5,1) ${cfg.intro * 0.75}s both` } },
-              h("path", { d: `M${sx},${sy} C${sx - 2},${sy - 5} ${sx - 6.5},${sy - 8.5} ${sx - 6.5},${sy - 14} A6.5,6.5 0 1 1 ${sx + 6.5},${sy - 14} C${sx + 6.5},${sy - 8.5} ${sx + 2},${sy - 5} ${sx},${sy} Z`, fill: "rgba(36,36,35,0.55)", stroke: "#F5CB5C", strokeWidth: 1.1, strokeLinejoin: "round" }),
-              h("circle", { cx: sx, cy: sy - 14, r: 2.2, fill: "none", stroke: "#F5CB5C", strokeWidth: 1 }),
-              h("text", { x: sx + 11, y: sy - 10, fill: "#E8EDDF", style: { font: "400 9px Figtree, system-ui, sans-serif", letterSpacing: "0.22em" } }, "SINGAPORE")
+              h("path", { d: `M${sx},${sy} C${sx - 2},${sy - 5} ${sx - 6.5},${sy - 8.5} ${sx - 6.5},${sy - 14} A6.5,6.5 0 1 1 ${sx + 6.5},${sy - 14} C${sx + 6.5},${sy - 8.5} ${sx + 2},${sy - 5} ${sx},${sy} Z`, fill: "rgba(47,50,53,0.55)", stroke: "#F8D36E", strokeWidth: 1.1, strokeLinejoin: "round" }),
+              h("circle", { cx: sx, cy: sy - 14, r: 2.2, fill: "none", stroke: "#F8D36E", strokeWidth: 1 }),
+              h("text", { x: sx + 11, y: sy - 10, fill: "#DCDCDD", style: { font: "400 9px Figtree, system-ui, sans-serif", letterSpacing: "0.22em" } }, "SINGAPORE")
             )
           )
         )
@@ -486,7 +487,7 @@ class Component extends DCLogic {
       { num: "02", title: "Tools nobody uses", copy: "Subscriptions get bought, half set up, then quietly abandoned." },
       { num: "03", title: "Too Many Vendors", copy: "Five providers, five contracts, and your staff are still handling brain-numbing admin & processes" }
     ];
-    const ICON = (p) => 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#F5CB5C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">' + p + '</svg>');
+    const ICON = (p) => 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#7CC4DA" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">' + p + '</svg>');
     const solveAreas = [
       { fn: "Customer & Sales", icon: ICON('<path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/><path d="M21 16v2a4 4 0 0 1-4 4h-5"/>'), symptom: "Same questions all day. Staff burning out", solution: "CS assistant + multilingual VAs", outcome: "Fast, accurate AI answers. Leads followed up" },
       { fn: "Operations & Admin", icon: ICON('<rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4M12 16h4M8 11h.01M8 16h.01"/>'), symptom: "Clunky admin drains morale and retention", solution: "Workflow automation + ops VAs and SOPs", outcome: "Free up admin time for managers" },
@@ -496,7 +497,7 @@ class Component extends DCLogic {
       { fn: "Market Entry & Setup", icon: ICON('<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/>'), symptom: "One person juggling five vendors", solution: "Setup checklists + corporate services panel", outcome: "One partner runs the vendors. You run the business" }
     ];
     const solveIdx = this.state?.solveIdx ?? 0;
-    const solveDots = solveAreas.map((a, i) => ({ label: 'Show ' + a.fn, w: i === solveIdx ? '24px' : '8px', bg: i === solveIdx ? '#F5CB5C' : '#5b6b5f', go: () => this.solveGo(i) }));
+    const solveDots = solveAreas.map((a, i) => ({ label: 'Show ' + a.fn, w: i === solveIdx ? '24px' : '8px', bg: i === solveIdx ? '#7CC4DA' : '#4C5C68', go: () => this.solveGo(i) }));
     const mobile = !!this.state?.mobile, menuOpen = mobile && !!this.state?.menuOpen;
     return {
       isMobile: mobile,
@@ -506,7 +507,7 @@ class Component extends DCLogic {
       menuExpanded: menuOpen ? 'true' : 'false',
       toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
       closeMenu: () => this.setState({ menuOpen: false }),
-      heroOverlay: mobile ? 'linear-gradient(180deg, rgba(36,36,35,0.88) 0%, rgba(36,36,35,0.78) 60%, rgba(36,36,35,0.95) 100%)' : 'linear-gradient(90deg, rgba(36,36,35,1) 0%, rgba(36,36,35,0.97) 20%, rgba(36,36,35,0.8) 32%, rgba(36,36,35,0.45) 43%, rgba(36,36,35,0.12) 51%, rgba(36,36,35,0) 55%)',
+      heroOverlay: mobile ? 'linear-gradient(180deg, rgba(47,50,53,0.88) 0%, rgba(47,50,53,0.78) 60%, rgba(47,50,53,0.95) 100%)' : 'linear-gradient(90deg, rgba(47,50,53,1) 0%, rgba(47,50,53,0.97) 20%, rgba(47,50,53,0.8) 32%, rgba(47,50,53,0.45) 43%, rgba(47,50,53,0.12) 51%, rgba(47,50,53,0) 55%)',
       solveTrack: this.solveTrackRef,
       solveDots,
       solvePause: () => { this.solvePaused = true; },

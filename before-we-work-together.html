@@ -12,15 +12,19 @@
 
 <style>
   :root {
-    /* Connected Commons tokens */
-    --ink: #242423;
-    --graphite: #333533;
-    --sage: #CFDBD5;
-    --mist: #E8EDDF;
-    --paper: #FBFAF6;
-    --yellow: #F5CB5C;
-    --yellow-deep: #8A6D1F;
-    --sage-deep: #5B6B5F;
+    /* Connected Commons tokens (Alt palette) */
+    --ink: #2F3235;
+    --graphite: #46494C;
+    --slate: #4C5C68;
+    --fog: #B8BDC2;
+    --mist: #DCDCDD;
+    --paper: #F4F4F5;
+    --jasmine: #F8D36E;
+    --jasmine-deep: #6B520C;
+    --cyan: #1985A1;
+    --cyan-action: #17819C;
+    --cyan-light: #7CC4DA;
+    --cyan-deep: #0B5B72;
 
     --radius-sm: 8px;
     --radius-lg: 20px;
@@ -45,7 +49,7 @@
   .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
   /* ---------- Top bar (dark) ---------- */
-  .topbar { background: var(--ink); color: var(--mist); border-bottom: 1px solid var(--sage-deep); }
+  .topbar { background: var(--ink); color: var(--mist); border-bottom: 1px solid var(--slate); }
   .topbar .wrap {
     display: flex; align-items: center; justify-content: space-between;
     height: 76px;
@@ -53,22 +57,22 @@
   .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
   .brand img { width: 36px; height: 36px; display: block; }
   .wordmark { font-weight: 800; font-size: 22px; line-height: 1.2; letter-spacing: -0.01em; color: var(--mist); }
-  .wordmark span { color: var(--yellow); }
+  .wordmark span { color: var(--jasmine); }
   .nav { display: none; gap: 28px; }
-  .nav a { font-size: 14px; font-weight: 500; text-decoration: none; color: var(--sage); }
-  .nav a:hover { color: var(--yellow); }
+  .nav a { font-size: 14px; font-weight: 500; text-decoration: none; color: var(--fog); }
+  .nav a:hover { color: var(--jasmine); }
   .back {
-    font-size: 14px; font-weight: 500; text-decoration: none; color: var(--sage);
+    font-size: 14px; font-weight: 500; text-decoration: none; color: var(--fog);
     display: inline-flex; align-items: center; gap: 8px; padding: 8px 4px; white-space: nowrap;
   }
-  .back:hover { color: var(--yellow); }
+  .back:hover { color: var(--jasmine); }
   .back svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
   /* ---------- Letter section (light) ---------- */
   .letter-section { padding: 72px 0 96px; }
   .eyebrow {
     font-size: 13px; line-height: 1.4; font-weight: 700; letter-spacing: 0.14em;
-    text-transform: uppercase; color: var(--yellow); text-align: center;
+    text-transform: uppercase; color: var(--cyan-light); text-align: center;
   }
 
   .layout { max-width: 720px; margin: 28px auto 0; }
@@ -77,15 +81,15 @@
     position: relative;
     max-width: 720px; margin: 0 auto;
     background: var(--graphite);
-    border: 1px solid var(--sage-deep);
+    border: 1px solid var(--slate);
     border-radius: var(--radius-lg);
     padding: 64px 64px 56px;
     
   }
-  /* soft sage band at the top edge, like a letterhead */
+  /* soft slate band at the top edge, like a letterhead */
   .letter::before {
     content: ""; position: absolute; left: 0; right: 0; top: 0; height: 8px;
-    background: var(--sage-deep); border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    background: var(--slate); border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   }
 
   .greeting {
@@ -105,9 +109,9 @@
     max-width: 62ch;
   }
   
-  /* the one yellow moment on the page */
+  /* the one cyan moment on the page */
   mark {
-    background: var(--yellow); color: var(--ink);
+    background: var(--cyan-action); color: #FFFFFF;
     padding: 0 6px; border-radius: var(--radius-sm);
     -webkit-box-decoration-break: clone; box-decoration-break: clone;
     font-weight: 700;
@@ -134,7 +138,7 @@
   .arch::before {
     content: ""; position: absolute; inset: 0;
     transform: translate(14px, 14px);
-    border: 1.5px solid var(--sage-deep);
+    border: 1.5px solid var(--slate);
     border-radius: 160px 160px var(--radius-lg) var(--radius-lg);
   }
   .arch img {
@@ -144,19 +148,19 @@
     background: var(--graphite);
   }
   .nameplate { margin-top: 32px; padding-left: 4px; }
-  .nameplate .rule { display: block; width: 40px; height: 2px; background: var(--sage-deep); margin-bottom: 14px; }
+  .nameplate .rule { display: block; width: 40px; height: 2px; background: var(--slate); margin-bottom: 14px; }
   .nameplate strong { display: block; font-size: 18px; font-weight: 700; color: var(--mist); line-height: 1.3; }
-  .nameplate span { display: block; font-size: 14px; font-weight: 500; color: var(--sage); margin-top: 2px; }
+  .nameplate span { display: block; font-size: 14px; font-weight: 500; color: var(--fog); margin-top: 2px; }
 
   /* Mobile portrait: round, centred on the face */
   .portrait {
     width: 112px; height: 112px; border-radius: 50%;
     object-fit: cover; object-position: center;
     border: 3px solid var(--graphite);
-    outline: 2px solid var(--sage-deep);
+    outline: 2px solid var(--slate);
     display: block;
   }
-  .letter p.role { margin: 10px 0 0; font-family: var(--sans); font-size: 14px; line-height: 1.5; font-weight: 500; color: var(--sage); }
+  .letter p.role { margin: 10px 0 0; font-family: var(--sans); font-size: 14px; line-height: 1.5; font-weight: 500; color: var(--fog); }
   .role strong { font-weight: 700; color: var(--mist); }
 
   /* ---------- Call to action (dark) ---------- */
@@ -165,8 +169,8 @@
     font-size: clamp(28px, 4vw, 40px); line-height: 1.15; font-weight: 800;
     letter-spacing: -0.01em; color: var(--mist); max-width: 22ch; margin: 12px auto 0;
   }
-  .cta .eyebrow { color: var(--yellow); }
-  .cta p { color: var(--sage); font-size: 18px; max-width: 52ch; margin: 18px auto 32px; }
+  .cta .eyebrow { color: var(--cyan-light); }
+  .cta p { color: var(--fog); font-size: 18px; max-width: 52ch; margin: 18px auto 32px; }
   .buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
   .btn {
     display: inline-flex; align-items: center; gap: 10px;
@@ -175,26 +179,26 @@
     text-decoration: none; transition: transform .15s ease, border-color .15s ease;
   }
   .btn svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-  .btn-primary { background: var(--yellow); color: var(--ink); }
+  .btn-primary { background: var(--cyan-action); color: #FFFFFF; }
   .btn-primary:hover { transform: translateY(-2px); }
-  .btn-secondary { border: 1.5px solid var(--sage); color: var(--mist); }
-  .btn-secondary:hover { border-color: var(--yellow); }
+  .btn-secondary { border: 1.5px solid var(--fog); color: var(--mist); }
+  .btn-secondary:hover { border-color: var(--cyan-light); }
 
   /* ---------- Footer (mirrors index.html) ---------- */
-  footer { background: var(--ink); color: var(--sage); padding: 56px 0 32px; border-top: 1px solid var(--sage-deep); font-size: 14px; font-weight: 500; }
+  footer { background: var(--ink); color: var(--fog); padding: 56px 0 32px; border-top: 1px solid var(--slate); font-size: 14px; font-weight: 500; }
   .foot-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 40px; }
   .foot-brand p { margin-top: 14px; max-width: 32ch; line-height: 1.5; }
-  .foot-brand p.small { font-size: 13px; color: var(--sage); opacity: .85; }
-  footer h3 { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--yellow); margin-bottom: 14px; }
+  .foot-brand p.small { font-size: 13px; color: var(--fog); opacity: .85; }
+  footer h3 { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cyan-light); margin-bottom: 14px; }
   footer ul { list-style: none; display: grid; gap: 10px; }
   footer a { text-decoration: none; }
-  footer a:hover { color: var(--yellow); }
+  footer a:hover { color: var(--jasmine); }
   footer a[aria-current="page"] { color: var(--mist); }
-  .disclaimer { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--sage-deep); font-size: 13px; line-height: 1.6; max-width: 90ch; }
+  .disclaimer { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--slate); font-size: 13px; line-height: 1.6; max-width: 90ch; }
   .copy { margin-top: 12px; font-size: 13px; opacity: .85; }
   @media (max-width: 860px) { .foot-grid { grid-template-columns: 1fr 1fr; } .foot-brand { grid-column: 1 / -1; } }
 
-  a:focus-visible, .btn:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; border-radius: 6px; }
+  a:focus-visible, .btn:focus-visible { outline: 3px solid var(--cyan-light); outline-offset: 3px; border-radius: 6px; }
 
   @media (min-width: 860px) {
     .nav { display: flex; }
@@ -257,11 +261,11 @@
 
         <p>You may also be someone who knows me personally and is rooting for my success. Regardless of your intentions, thank you for coming.</p>
 
-        <p>From banking and finance to real estate, then logistics, and most recently software development and outsourcing, my 20-odd years of meandering careers have mostly been spent in business development, growth and relationship management.</p> 
-        
-        <p>I've never been one to shy away from a career worth exploring. I would rather try it than spend years wondering "what if I did that?"</p>
+        <p>My 20-odd years of meandering careers have mostly been spent in business development, growth and relationship management, with customer service never far behind. I've never been one to shy away from a career worth exploring. I would rather try it than spend years wondering "what if I did that?"</p>
 
-        <p>Over the years, I've learned that regardless of your industry or your position in a company, one trait matters most: the ability to build <mark>trust</mark> with business partners and clients.</p>
+        <p>From banking and finance to real estate, then logistics, and most recently software development and outsourcing, I've mostly taken on roles centred on building a business from the ground up.</p>
+
+        <p>Over the years, I've learned that regardless of your industry or your position in a company, one trait matters most: the ability to build relationships, networks and <mark>trust</mark> with business partners.</p>
 
         <p>That starts with being of value to those you serve. Hence, we are committed to always looking after your needs and solving your problems first. We will be honest about what we can and cannot do, and we will work towards helping you grow your business, and grow with you in the process.</p>
 
