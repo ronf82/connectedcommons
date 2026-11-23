@@ -1,1 +1,8 @@
 .claude/settings.local.json
+
+# Full-size source images (web versions live in images/)
+image-originals/
+
+# Internal project notes (stay on this PC; the repo is public)
+CLAUDE.md
+TODO.md

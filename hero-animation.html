@@ -81,7 +81,7 @@ html,body{height:100%;overflow:hidden}
 </style>
 </head>
 <body>
-<div class="stage" id="stage" role="img" aria-label="Map of Southeast Asia with Singapore as the hub. Dotted lines connect Singapore to companies in Kuala Lumpur, Bangkok, Manila and Jakarta. Each company's time-consuming task, such as manual invoicing or unanswered enquiries, is resolved, and the Connected Commons logo sits at Singapore.">
+<div class="stage" id="stage" role="img" aria-label="Map of Southeast Asia with Singapore as the hub. Dotted lines connect Singapore to companies in Kuala Lumpur, Bangkok, Manila and Jakarta. Each company's sales problem, such as a stalled pipeline or ignored cold emails, turns into progress such as qualified demos, and the Connected Commons logo sits at Singapore.">
       <canvas id="map" aria-hidden="true"></canvas>
       <div class="cards" id="cards" aria-hidden="true"></div>
       <canvas id="fx" aria-hidden="true"></canvas>
@@ -103,10 +103,10 @@ const ICON = {
 const HUB = {lon:103.82, lat:1.35};
 // order = the order the hours get eaten
 const CITIES = [
-  {name:"Bangkok",      lon:100.50, lat:13.76, task:"Copy-paste reporting", done:"Reports sent",       place:"upleft",  compact:true},
-  {name:"Manila",       lon:120.98, lat:14.60, task:"Data entry by hand",   done:"Records updated",    place:"up",      compact:true},
-  {name:"Jakarta",      lon:106.85, lat:-6.21, task:"Unanswered enquiries", done:"Enquiries answered", place:"down",    compact:true},
-  {name:"Kuala Lumpur", lon:101.69, lat:3.14,  task:"Manual invoicing",     done:"Invoices drafted",   place:"left",    compact:false}
+  {name:"Bangkok",      lon:100.50, lat:13.76, task:"No clear buyer",       done:"Ideal customer set",  place:"upleft",  compact:true},
+  {name:"Manila",       lon:120.98, lat:14.60, task:"Cold emails ignored",  done:"Replies coming in",  place:"up",      compact:true},
+  {name:"Jakarta",      lon:106.85, lat:-6.21, task:"Leads going cold",     done:"Follow-ups on time", place:"down",    compact:true},
+  {name:"Kuala Lumpur", lon:101.69, lat:3.14,  task:"Pipeline stalled",     done:"Qualified demos",    place:"left",    compact:false}
 ];
 
 /* ---------- timeline (ms) ---------- */
