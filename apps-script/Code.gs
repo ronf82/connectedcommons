@@ -14,6 +14,10 @@
  *   (Do NOT create a new deployment, or the URL changes.) Approve the new Gmail permission when asked.
  */
 
+// Leave empty if this script was opened from the Sheet (Extensions > Apps Script).
+// If it is a standalone script, paste the Sheet's ID here (the long code in the Sheet's URL between /d/ and /edit).
+var SHEET_ID = '';
+
 var REPORT_FROM_NAME = 'Ron Foo, Connected Commons';
 var REPLY_TO = 'hello@connectedcommons.co';
 var NOTIFY_RON = 'hello@connectedcommons.co';   // gets a short note for each scorecard lead; set to '' to turn off
@@ -35,6 +39,25 @@ function doPost(e) {
     console.error(err);
   }
   return ok_();
+}
+
+/**
+ * Run this once from the editor (choose it in the function menu, then click Run).
+ * It asks for the Sheets and Gmail permissions, adds a test row to the "Scorecard" tab
+ * and emails a sample report to you. Delete the test row afterwards.
+ */
+function sendTestReport() {
+  var me = Session.getActiveUser().getEmail() || Session.getEffectiveUser().getEmail();
+  handleScorecard_({
+    source: 'scorecard', name: 'Ron Test', email: me, company: 'Test Co', newsletter: 'no',
+    score: '54', band: "The foundations are there, the engine isn't",
+    market: '67', people: '33', process: '56', ai: '61', weakest: 'People', service: 'Fractional BD Support',
+    gaps: 'Who works on new business each week? You said: "Someone helps now and then". Good looks like: "A clear owner with set hours every week". || Block a fixed weekly slot for new business and give one person clear ownership of it, even part-time.' +
+          ' ## How fast do new leads get a personal reply? You said: "Within a few days". Good looks like: "Always within one working day". || Set a rule and a reminder: every new lead gets a personal reply within one working day.' +
+          ' ## Where do most new deals come from? You said: "Mostly networks, a few from elsewhere". Good looks like: "Mostly from channels that do not rely on one person". || List where your last ten deals came from. If most trace back to one or two people, start one channel that does not.',
+    answers: '2,2,2,1,1,1,2,1,2,2,2,1', stage: '11 to 50', region: 'Singapore', team: '11 to 50', page: 'apps-script test'
+  });
+  Logger.log('Test report sent to ' + me);
 }
 
 function handleLegacy_(p) {
@@ -114,7 +137,7 @@ function reportHtml_(p) {
     '<table role="presentation" style="width:100%;border-collapse:collapse;margin-bottom:24px">' + gapRows + '</table>' +
     '<p style="margin:0 0 20px;padding-left:14px;border-left:4px solid #F5CB5C">Your weakest area is <b>' + esc_(p.weakest) + '</b>. Where we would start: <b>' + esc_(p.service) + '</b>.</p>' +
     '<p style="margin:0 0 24px">If you would like to talk it through, reply to this email, <a href="' + WHATSAPP + '" style="color:#0B5B72">message me on WhatsApp</a> or <a href="' + CALENDAR + '" style="color:#0B5B72">book a call</a>.</p>' +
-    '<p style="margin:0">Ron Foo<br><span style="color:#4C5C68">Connected Commons · <a href="' + SITE + '" style="color:#4C5C68">connectedcommons.co</a></span></p>' +
+    '<p style="margin:0">Ron Foo<br><span style="color:#4C5C68">Connected Commons &middot; <a href="' + SITE + '" style="color:#4C5C68">connectedcommons.co</a></span></p>' +
     '</div>' +
     '<div style="padding:16px 32px;background:#F4F4F5;font:12px/1.6 Arial,sans-serif;color:#4C5C68">You are receiving this because you asked for your scorecard report at connectedcommons.co. ' +
     (p.newsletter === 'yes' ? 'You also asked for occasional GTM tips and updates; reply "unsubscribe" at any time to stop them. ' : 'We will not add you to our newsletter unless you ask. ') +
@@ -134,7 +157,7 @@ function reportText_(p) {
 
 /* helpers */
 function sheet_(name, headers) {
-  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var ss = SHEET_ID ? SpreadsheetApp.openById(SHEET_ID) : SpreadsheetApp.getActiveSpreadsheet();
   var sh = ss.getSheetByName(name);
   if (!sh) { sh = ss.insertSheet(name); sh.appendRow(headers); sh.setFrozenRows(1); }
   return sh;
