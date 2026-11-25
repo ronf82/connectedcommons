@@ -6,7 +6,7 @@ Connected Commons is a brand operated by RFtechstuff (UEN 53536160B), Singapore.
 
 ## Key facts
 
-- Who leads it: Ron Foo (also known as Foo Chuanrong), based in Singapore. More than 20 years in business development and operations across banking, real estate, logistics, software and outsourcing in Southeast Asia. Speaks English and Chinese.
+- Who leads it: Ron Foo (also known as Foo Chuanrong), based in Singapore. More than 20 years in business development and operations across banking, real estate, logistics, software and outsourcing in Southeast Asia. Roles have included Business Development Head in software and outsourcing, Senior Marketing Director in real estate, Assistant Vice President (AVP) in banking and finance, and Logistics Executive. Speaks English and Chinese.
 - What it does: GTM strategy, pipeline build and fractional business development (BD) support for B2B tech companies.
 - Where: Singapore, serving companies based in or selling into Singapore and Southeast Asia.
 - How it works: people, process and AI. Ron leads the judgement calls (positioning, buyer conversations, partner introductions). A written GTM playbook sets the process. AI handles research, list building, first drafts and reporting, and a person reviews all outreach before it is sent.
@@ -23,10 +23,9 @@ Connected Commons is a brand operated by RFtechstuff (UEN 53536160B), Singapore.
 ## Pages
 
 - [Home](https://www.connectedcommons.co/): services, how we work, who it is for, and how to get in touch
-- [Ron Foo](https://www.connectedcommons.co/ron-foo): profile of Ron Foo, who leads Connected Commons
+- [Ron Foo](https://www.connectedcommons.co/ron-foo): a personal note from Ron Foo ("Before we work together") and his profile, with career roles by industry
 - [FAQ](https://www.connectedcommons.co/faq): plain answers about services, fit, pricing and how engagements run
 - [GTM Readiness Scorecard](https://www.connectedcommons.co/scorecard): free 12-question go-to-market readiness check for B2B tech companies
-- [Before We Work Together](https://www.connectedcommons.co/before-we-work-together): a personal note from Ron Foo
 
 ## Contact
 
