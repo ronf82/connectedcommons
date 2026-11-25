@@ -70,6 +70,13 @@ footer a{color:var(--alabaster)}
 
 /* intro */
 .intro{padding:clamp(56px,10vw,96px) 0}
+.intro .wrap.intro-grid{max-width:1120px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:center}
+.intro-art{display:flex;justify-content:center}
+.intro-art img{display:block;width:100%;max-width:360px;height:auto;filter:drop-shadow(0 18px 30px rgba(0,0,0,0.35))}
+.wiggle{transform-origin:50% 92%;animation:cc-wiggle 3s ease-in-out infinite}
+@keyframes cc-wiggle{0%,70%,100%{transform:rotate(0)}76%{transform:rotate(-3deg)}82%{transform:rotate(2.5deg)}88%{transform:rotate(-1.5deg)}94%{transform:rotate(0.8deg)}}
+@media (max-width:800px){.intro .wrap.intro-grid{grid-template-columns:minmax(0,1fr)}.intro-art{order:-1}.intro-art img{max-width:200px}}
+@media (prefers-reduced-motion: reduce){.wiggle{animation:none}}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
 .chip{font-size:13px;font-weight:700;letter-spacing:0.06em;padding:8px 14px;border-radius:999px;border:1px solid var(--slate);color:var(--alabaster);background:rgba(36,36,35,0.4)}
 
@@ -166,14 +173,18 @@ select,input[type=text],input[type=email]{font:500 16px/1.4 'Inter',system-ui,sa
 
 <main>
 <section class="intro dots-dark">
-  <div class="wrap">
+  <div class="wrap intro-grid">
+    <div class="intro-text">
     <p class="eyebrow">GTM Readiness Scorecard · Free · About 3 minutes</p>
     <h1 style="margin-top:16px">How ready is your pipeline to <span class="mark">grow</span>?</h1>
-    <p class="lead">12 short questions about how your B2B company finds, reaches and qualifies buyers. Answer honestly and you will see your score and your top 3 gaps straight away, with a practical next step for each. No sign-up needed.</p>
+    <p class="lead">How effective is your go-to-market strategy? Answer 12 quick questions about how your business identifies, reaches and qualifies potential buyers. Get your score instantly, uncover your top three gaps, and receive practical recommendations on what to do next.</p>
+    <p class="lead" style="margin-top:12px">No sign-up required.</p>
     <div class="chips" aria-label="The four areas scored">
       <span class="chip">01 Market</span><span class="chip">02 People</span><span class="chip">03 Process</span><span class="chip">04 AI &amp; tools</span>
     </div>
     <div class="ctas"><a class="btn btn-primary" href="#quiz">Start the scorecard</a></div>
+    </div>
+    <div class="intro-art"><img class="wiggle" src="images/gtm-plant.webp" alt="Illustration of a plant growing from a pot labelled GTM, with pipes for branches and new leaves at each outlet" width="717" height="960"></div>
   </div>
 </section>
 
