@@ -1,2 +1,20 @@
 apps-script/
 image-originals/
+
+# Working files and old-positioning drafts: keep them in the repo, but do not
+# publish them on the live site (they would compete with the real pages in search).
+export/
+uploads/
+screenshots/
+files/
+assets/
+_ds/
+connected-commons-logo-assets/
+*.dc.html
+/Discovery_Offer_dc.html
+/discovery-offer-section.html
+/Connected_Commons_hero_animation.html
+/support.js
+/image-slot.js
+/README.md
+/README.txt
